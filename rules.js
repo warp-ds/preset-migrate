@@ -28,4 +28,7 @@ export default [
   [/^outline-(none|white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // component-specific
   [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
+  [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
+   // old design system classes (troika)
+  [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
 ]
