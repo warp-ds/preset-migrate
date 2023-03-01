@@ -13,7 +13,6 @@ export default [
   [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced)],
   [/^aspect-([wh])$/, ([_]) => emitWarning(_, TYPES.replaced, "use e.g. aspect-1/1")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^focus-ring$/, ([_]) =>  emitWarning(_, TYPES.replaced, "use focusable")],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],
   [/^(drop-)?shadow(-(2|3|4|10|20|30|40|none))?$/, ([_]) => emitWarning(_, TYPES.replaced)],
   [/^decoration-(slice|none|clone)/, ([_]) => emitWarning(_, TYPES.removed)],
@@ -26,9 +25,14 @@ export default [
   [/^(backdrop-)?(invert|sepia)(-0)?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^backdrop-opacity-(\d+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^outline-(none|white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  // component-specific
+  // semantic classes
   [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
   [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
-   // old design system classes (troika)
+  // old design system classes (troika)
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^container$/, ([_]) => emitWarning(_, TYPES.removed)],
+  // miscellaneous
+  [/^focus-ring$/, ([_]) =>  emitWarning(_, TYPES.replaced, "use focusable")],
+  [/^transition-gpu$/, ([_]) => emitWarning(_, TYPES.removed, "use 'transform-gpu' or 'will-change-*'")],
+  [/^fixed-ios-fix$/,([_]) => emitWarning(_, TYPES.removed, "use 'transform translate-z-0'")],
 ]
