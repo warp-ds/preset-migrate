@@ -26,15 +26,15 @@ export default [
   [/^(backdrop-)?blur(-(.*))?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^(backdrop-)?(brightness|contrast|hue-rotate|saturate)-(\d+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^(backdrop-)?(invert|sepia)(-0)?$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^(backdrop-)?(invert|sepia)(-0)?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^backdrop-opacity-(\d+)$/, ([_]) => emitWarning(_, TYPES.removed)],
+  // outline
   [/^outline-(none|white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // semantic classes
   [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
   [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
   // old design system classes (troika)
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^container$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/(.+)?container/, ([_]) => emitWarning('container', TYPES.removed)],
   // miscellaneous
   [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.removed)],
   [/^transition-gpu$/, ([_]) => emitWarning(_, TYPES.removed, "use 'transform-gpu' or 'will-change-*'")],
