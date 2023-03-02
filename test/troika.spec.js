@@ -5,7 +5,7 @@ setup();
 
 test('prints a warning for using deprecated container and t-*', async ({ uno }) => {
     const warnSpy = vi.spyOn(global.console, 'warn');
-    const classes = ['container', 't-grid','t'];
+    const classes = ['container', 't-grid'];
     const { css } = await uno.generate(classes);
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(2);
@@ -15,6 +15,13 @@ test('prints a warning for using deprecated container and t-*', async ({ uno }) 
         "[REMOVED] t-grid",
       ]
     `);
+});
+test('prints NO warning for using non deprecated t', async ({ uno }) => {
+    const warnSpy = vi.spyOn(global.console, 'warn');
+    const classes = ['t'];
+    const { css } = await uno.generate(classes);
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot('[]');
 });
 
 test('prints a warning for using deprecated container with pseudo', async ({ uno }) => {
