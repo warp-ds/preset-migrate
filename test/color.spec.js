@@ -86,4 +86,18 @@ describe("colors", () => {
       expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
     })
   });
+
+  test("Emits a warning for color classes with pseudo", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = ["focus:text-blue-500", "active:divide-yellow-100", "sm:border-green-50", "!bg-yellow-400"]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    classes.forEach((value) => {
+      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value.split(/[:!]/)[1]}`)
+    })
+  });
 })
