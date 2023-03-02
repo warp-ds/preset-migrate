@@ -1,6 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
-import { removePseudo, setup } from "./_helpers.js";
-import { TYPES } from "../rules.js"
+import { setup } from "./_helpers.js";
 
 
 setup();
@@ -12,9 +11,7 @@ describe('semantic classes', () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value} -> use Warp components instead`)
-          })        
+        expect(warnSpy.calls.flat()).toMatchSnapshot();        
     });
     test('handles deprecated segment-control|field with pseudo', async ({ uno }) => {
         const warnSpy = vi.spyOn(global.console, 'warn');
@@ -22,9 +19,7 @@ describe('semantic classes', () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)} -> use Warp components instead`);
-        });   
+        expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
     test('handles deprecated link with a custom message with and without pseudo', async ({ uno }) => {
         const warnSpy = vi.spyOn(global.console, 'warn');
@@ -32,12 +27,7 @@ describe('semantic classes', () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
-          [
-            "[REMOVED] link, link--dark and link--block -> use Warp components instead",
-            "[REMOVED] link, link--dark and link--block -> use Warp components instead",
-          ]
-        `);     
+        expect(warnSpy.calls.flat()).toMatchSnapshot();      
     }); 
     test('handles deprecated button|input|f', async ({ uno }) => {
         const warnSpy = vi.spyOn(global.console, 'warn');
@@ -45,9 +35,7 @@ describe('semantic classes', () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)} -> use Warp components instead`);
-        });   
+        expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
     test('handles deprecated button|input|f with pseudo', async ({ uno }) => {
         const warnSpy = vi.spyOn(global.console, 'warn');
@@ -55,8 +43,6 @@ describe('semantic classes', () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)} -> use Warp components instead`);
-        });   
+        expect(warnSpy.calls.flat()).toMatchSnapshot();   
     });
 })

@@ -11,8 +11,12 @@ describe('outline', () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-        })
+        expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+          [
+            "[REMOVED] outline-black",
+            "[REMOVED] outline-none",
+            "[REMOVED] outline-white",
+          ]
+        `);  
     });
 });

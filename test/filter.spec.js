@@ -29,9 +29,7 @@ describe('filter',  () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-        })
+        expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
 
     test('prints a warning for using deprecated filters brightness|contrast|hue-rotate|saturate', async ({ uno }) => {
@@ -39,9 +37,7 @@ describe('filter',  () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-        })
+        expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
 
     test('prints a warning for using deprecated backdrop opacity filter', async ({ uno }) => {
@@ -49,9 +45,7 @@ describe('filter',  () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-        })
+        expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
 
     test('prints a warning for using deprecated (backdrop) blur filter', async ({ uno }) => {
@@ -59,8 +53,6 @@ describe('filter',  () => {
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-        classes.forEach((value) => {
-            expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-        })
+        expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
 });
