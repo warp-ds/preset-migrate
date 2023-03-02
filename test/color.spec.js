@@ -1,4 +1,4 @@
-import { setup } from "./_helpers.js";
+import { removePseudo, setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
 import { colors, TYPES } from "../rules.js"
 
@@ -97,7 +97,7 @@ describe("colors", () => {
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value.split(/[:!]/)[1]}`)
+      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${removePseudo(value)}`)
     })
   });
 })

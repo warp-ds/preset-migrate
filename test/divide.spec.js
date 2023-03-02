@@ -1,4 +1,4 @@
-import { setup } from "./_helpers.js";
+import { removePseudo, setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
 import { TYPES } from "../rules.js"
 
@@ -31,7 +31,7 @@ describe("divide", () => {
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value.split(/[:!]/)[1]}`)
+      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)}`)
     })
   });
 })
