@@ -31,10 +31,10 @@ export default [
   [/^outline-(none|white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // semantic classes
   [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
-  [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
+  [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_?.startsWith('link') ? 'link, link--dark and link--block' : _, TYPES.removed, "use Warp components instead")],
   // old design system classes (troika)
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/(.+)?container/, ([_]) => emitWarning('container', TYPES.removed)],
+  [/^(.+)?container$/, ([_]) => emitWarning('container', TYPES.removed)],
   // miscellaneous
   [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.removed)],
   [/^transition-gpu$/, ([_]) => emitWarning(_, TYPES.removed, "use 'transform-gpu' or 'will-change-*'")],
