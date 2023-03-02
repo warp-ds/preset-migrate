@@ -1,6 +1,5 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { TYPES } from "../rules.js"
 
 setup();
 
@@ -15,9 +14,13 @@ describe("text", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] text-14",
+        "[REPLACED] text-24",
+        "[REPLACED] text-36",
+      ]
+    `);
   });
 
   test("Emits a warning if used with numbers", async (t) => {
@@ -29,9 +32,13 @@ describe("text", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] text-primary",
+        "[REPLACED] text-secondary",
+        "[REPLACED] text-danger",
+      ]
+    `);
   });
 
   test("Emits a warning if used with 'primary', 'secondary' or 'danger'", async (t) => {
@@ -43,8 +50,12 @@ describe("text", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${removePseudo(value)}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] text-primary",
+        "[REPLACED] text-secondary",
+        "[REPLACED] text-danger",
+      ]
+    `);
   });
 })

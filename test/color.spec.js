@@ -1,6 +1,6 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { colors, TYPES } from "../rules.js"
+import { colors } from "../rules.js"
 
 setup();
 
@@ -18,9 +18,7 @@ describe("colors", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
   test("Emits a warning if border class is used with a color", async (t) => {
@@ -34,9 +32,7 @@ describe("colors", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
   test("Emits a warning if background class is used with a color", async (t) => {
@@ -50,9 +46,7 @@ describe("colors", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
   test("Emits a warning if divide class is used with a color", async (t) => {
@@ -66,9 +60,7 @@ describe("colors", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
   test("Emits a warning if 'text', 'bg', 'border' or 'divide' is used with 'current', 'transparent', 'none' or 'white'", async (t) => {
@@ -82,9 +74,7 @@ describe("colors", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
   test("Emits a warning for color classes with pseudo", async (t) => {
@@ -96,8 +86,6 @@ describe("colors", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${removePseudo(value)}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 })

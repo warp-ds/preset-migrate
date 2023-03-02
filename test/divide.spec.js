@@ -1,6 +1,5 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { TYPES } from "../rules.js"
 
 setup();
 
@@ -15,9 +14,14 @@ describe("divide", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REMOVED] divide-dotted",
+        "[REMOVED] divide-solid",
+        "[REMOVED] divide-double",
+        "[REMOVED] divide-dashed",
+      ]
+    `);
   });
 
 
@@ -30,8 +34,13 @@ describe("divide", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REMOVED] divide-dotted",
+        "[REMOVED] divide-solid",
+        "[REMOVED] divide-double",
+        "[REMOVED] divide-dashed",
+      ]
+    `);
   });
 })

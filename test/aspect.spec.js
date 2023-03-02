@@ -1,6 +1,5 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { TYPES } from "../rules.js"
 
 setup();
 
@@ -15,9 +14,12 @@ describe("aspect", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value} -> use e.g. aspect-1/1`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] aspect-w -> use e.g. aspect-1/1",
+        "[REPLACED] aspect-h -> use e.g. aspect-1/1",
+      ]
+    `);
   });
 
   test("Emits a warning if aspect-w or aspect-h is used with pseudo", async (t) => {
@@ -29,9 +31,12 @@ describe("aspect", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${removePseudo(value)} -> use e.g. aspect-1/1`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] aspect-w -> use e.g. aspect-1/1",
+        "[REPLACED] aspect-h -> use e.g. aspect-1/1",
+      ]
+    `);
   });
 
   test("Emits a warning if aspect-none is used", async (t) => {
@@ -43,9 +48,11 @@ describe("aspect", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REMOVED] aspect-none",
+      ]
+    `);
   });
 
   test("Emits a warning if aspect-none used with pseudo", async (t) => {
@@ -57,9 +64,12 @@ describe("aspect", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REMOVED] aspect-none",
+        "[REMOVED] aspect-none",
+      ]
+    `);
   });
 
 })

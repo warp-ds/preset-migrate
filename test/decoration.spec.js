@@ -1,6 +1,5 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { TYPES } from "../rules.js"
 
 setup();
 
@@ -14,9 +13,13 @@ describe("decoration", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REMOVED] decoration-slice",
+        "[REMOVED] decoration-none",
+        "[REMOVED] decoration-clone",
+      ]
+    `);
   });
 
 
@@ -29,8 +32,12 @@ describe("decoration", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REMOVED] decoration-slice",
+        "[REMOVED] decoration-none",
+        "[REMOVED] decoration-clone",
+      ]
+    `);
   });
 })

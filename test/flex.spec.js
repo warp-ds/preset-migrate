@@ -1,6 +1,5 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { TYPES } from "../rules.js"
 
 setup();
 
@@ -15,9 +14,14 @@ describe("flex", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${value} -> use ${value.replace("flex-", "")}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] flex-shrink -> use shrink",
+        "[REPLACED] flex-shrink-0 -> use shrink-0",
+        "[REPLACED] flex-grow -> use grow",
+        "[REPLACED] flex-grow-0 -> use grow-0",
+      ]
+    `);
   });
 
   test("Emits a warning if flex-shrink, flex-grow, flex-shrink-0 or flex-grow-0 is used", async (t) => {
@@ -29,9 +33,13 @@ describe("flex", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      const classWithoutPseudo = removePseudo(value)
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.replaced} ${classWithoutPseudo} -> use ${classWithoutPseudo.replace("flex-", "")}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
+      [
+        "[REPLACED] flex-shrink -> use shrink",
+        "[REPLACED] flex-shrink-0 -> use shrink-0",
+        "[REPLACED] flex-grow -> use grow",
+        "[REPLACED] flex-grow-0 -> use grow-0",
+      ]
+    `);
   });
 })

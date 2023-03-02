@@ -1,6 +1,6 @@
-import { removePseudo, setup } from "./_helpers.js";
+import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { colors, TYPES } from "../rules.js"
+import { colors, } from "../rules.js"
 import { colorHues } from "./color.spec.js";
 
 setup();
@@ -17,15 +17,13 @@ describe("ring", () => {
   test("Emits a warning if ring classes are used", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
-    const classes = ringValues.map((_,i) => `ring-${i}`)
+    const classes = ringValues.map(el => `ring-${el}`)
 
     const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
 
@@ -38,8 +36,6 @@ describe("ring", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    classes.forEach((value) => {
-      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)}`)
-    })
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 })
