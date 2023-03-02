@@ -1,0 +1,36 @@
+import { removePseudo, setup } from "./_helpers.js";
+import { describe, expect, test, vi } from "vitest";
+import { TYPES } from "../rules.js"
+
+setup();
+
+describe("decoration", () => {
+  test("Emits a warning if used with 'slice', 'none' or 'clone'", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = ["decoration-slice", "decoration-none", "decoration-clone"]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    classes.forEach((value) => {
+      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${value}`)
+    })
+  });
+
+
+  test("Emits a warning if used with pseudo", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = ["md:decoration-slice", "active:decoration-none", "!decoration-clone"]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    classes.forEach((value) => {
+      expect(warnSpy).toHaveBeenCalledWith(`${TYPES.removed} ${removePseudo(value)}`)
+    })
+  });
+})
