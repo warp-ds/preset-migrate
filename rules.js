@@ -61,7 +61,8 @@ export default [
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^(.+)?container$/, ([_]) => emitWarning('container', TYPES.removed)],
   // miscellaneous
-  [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.removed)],
   [/^transition-gpu$/, ([_]) => emitWarning(_, TYPES.removed, "use 'transform-gpu' or 'will-change-*'")],
   [/^fixed-ios-fix$/,([_]) => emitWarning(_, TYPES.removed, "use 'transform translate-z-0'")],
+  [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.replaced, "use focusable")],
+  [/^last-child:mb-0$/,([_]) => emitWarning(_, TYPES.replaced, "use last:mb-0")],
 ]
