@@ -1,9 +1,14 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "node dev.js"
+    "dev": "node dev.js",
+    "test": "vitest"
   },
   "devDependencies": {
-    "@unocss/core": "^0.49.4"
+    "@unocss/core": "^0.49.4",
+    "vitest": "^0.29.2"
+  },
+  "dependencies": {
+    "@unocss/preset-mini": "^0.50.1"
   }
 }
