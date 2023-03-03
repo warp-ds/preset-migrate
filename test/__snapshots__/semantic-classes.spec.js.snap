@@ -2,52 +2,52 @@
 
 exports[`semantic classes > handles deprecated button|input|f 2`] = `
 [
-  "[REMOVED] button -> use Warp components instead",
-  "[REMOVED] button--default -> use Warp components instead",
-  "[REMOVED] button--secondary -> use Warp components instead",
-  "[REMOVED] input-toggle -> use Warp components instead",
-  "[REMOVED] input -> use Warp components instead",
-  "[REMOVED] input--is-invalid -> use Warp components instead",
-  "[REMOVED] f-modal-title-leave-to -> use Warp components instead",
-  "[REMOVED] f-slider -> use Warp components instead",
-  "[REMOVED] f-card-outline -> use Warp components instead",
+  "[REMOVED] button -> use Warp button component instead",
+  "[REMOVED] button--default -> use Warp button component instead",
+  "[REMOVED] button--secondary -> use Warp button component instead",
+  "[REMOVED] input-toggle -> use Warp input component instead",
+  "[REMOVED] input -> use Warp input component instead",
+  "[REMOVED] input--is-invalid -> use Warp input component instead",
+  "[REMOVED] f-modal-title-leave-to -> use Warp modal component instead",
+  "[REMOVED] f-slider -> use Warp slider component instead",
+  "[REMOVED] f-card-outline -> use Warp card component instead",
 ]
 `;
 
 exports[`semantic classes > handles deprecated button|input|f with pseudo 2`] = `
 [
-  "[REMOVED] button -> use Warp components instead",
-  "[REMOVED] button--default -> use Warp components instead",
-  "[REMOVED] button--secondary -> use Warp components instead",
-  "[REMOVED] input-toggle -> use Warp components instead",
-  "[REMOVED] input -> use Warp components instead",
-  "[REMOVED] input--is-invalid -> use Warp components instead",
-  "[REMOVED] f-modal-title-leave-to -> use Warp components instead",
-  "[REMOVED] f-slider -> use Warp components instead",
-  "[REMOVED] f-card-outline -> use Warp components instead",
+  "[REMOVED] button -> use Warp button component instead",
+  "[REMOVED] button--default -> use Warp button component instead",
+  "[REMOVED] button--secondary -> use Warp button component instead",
+  "[REMOVED] input-toggle -> use Warp input component instead",
+  "[REMOVED] input -> use Warp input component instead",
+  "[REMOVED] input--is-invalid -> use Warp input component instead",
+  "[REMOVED] f-modal-title-leave-to -> use Warp modal component instead",
+  "[REMOVED] f-slider -> use Warp slider component instead",
+  "[REMOVED] f-card-outline -> use Warp card component instead",
 ]
 `;
 
 exports[`semantic classes > handles deprecated link with a custom message with and without pseudo 2`] = `
 [
-  "[REMOVED] link, link--dark and link--block -> use Warp components instead",
-  "[REMOVED] link, link--dark and link--block -> use Warp components instead",
+  "[REMOVED] link -> use Warp button component instead",
+  "[REMOVED] link -> use Warp button component instead",
 ]
 `;
 
 exports[`semantic classes > handles deprecated segment-control|field 2`] = `
 [
-  "[REMOVED] field -> use Warp components instead",
-  "[REMOVED] field-hint -> use Warp components instead",
-  "[REMOVED] segment-control__item -> use Warp components instead",
-  "[REMOVED] segment-control--is-disabled -> use Warp components instead",
-  "[REMOVED] segment-control -> use Warp components instead",
+  "[REMOVED] field -> use Warp form components instead",
+  "[REMOVED] field-hint -> use Warp form components instead",
+  "[REMOVED] segment-control__item -> use Warp toggle component instead",
+  "[REMOVED] segment-control--is-disabled -> use Warp toggle component instead",
+  "[REMOVED] segment-control -> use Warp toggle component instead",
 ]
 `;
 
 exports[`semantic classes > handles deprecated segment-control|field with pseudo 2`] = `
 [
-  "[REMOVED] field -> use Warp components instead",
-  "[REMOVED] segment-control__item -> use Warp components instead",
+  "[REMOVED] field -> use Warp form components instead",
+  "[REMOVED] segment-control__item -> use Warp toggle component instead",
 ]
 `;

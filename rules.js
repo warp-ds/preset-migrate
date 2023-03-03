@@ -3,7 +3,31 @@ export const TYPES = {
   removed: "[REMOVED]"
 }
 
-const emitWarning = (selector, deprecationType, message) => {console.warn(`${deprecationType} ${selector}${message ? " -> " + message : ""}`)}
+const componentsMap = {
+  button: "use Warp button component instead",
+  link: "use Warp button component instead",
+  field: "use Warp form components instead",
+  card: "use Warp card component instead",
+  input: "use Warp input component instead",
+  segment: "use Warp toggle component instead",
+  expandable: "use Warp expandable component instead",
+  modal: "use Warp modal component instead",
+  slider: "use Warp slider component instead",
+  thumb: "use Warp slider component instead",
+  spinner: "",
+  grid: "",
+  step: "use Warp steps component instead",
+  switch: "use Warp switch component instead",
+  tab: "use Warp tabs component instead",
+  toast: "use Warp toast component instead",
+  list: "use Warp list component instead",
+}
+
+const emitWarning = (selector, deprecationType, message) => {
+  const component = Object.keys(componentsMap).find(key => selector.includes(key));
+  const warningMessage = component ? componentsMap[component] : message;
+  console.warn(`${deprecationType} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);
+}
 
 export const colors = ["blue", "green", "aqua", "yellow", "red", "bluegray", "gray"]
 export const colorHues = Array.from({ length: 10 }, (_, index) => index === 0 ? 50 : index * 100); // 50, 100, 200, ..., 900
@@ -31,8 +55,8 @@ export default [
   // outline
   [/^outline-(none|white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // semantic classes
-  [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed, "use Warp components instead")],
-  [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_?.startsWith('link') ? 'link, link--dark and link--block' : _, TYPES.removed, "use Warp components instead")],
+  [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed)],
   // old design system classes (troika)
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^(.+)?container$/, ([_]) => emitWarning('container', TYPES.removed)],
