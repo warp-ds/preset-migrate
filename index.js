@@ -5,16 +5,16 @@ import {
   variantNegative,
   variantTaggedPseudoClasses,
   variantPseudoClassFunctions,
-  variantPseudoClassesAndElements,
 } from '@unocss/preset-mini/variants';
 import { theme } from './theme.js';
+import { variantPseudoClassesAndElements } from './_pseudo.js';
 
 const variants = [
   variantBreakpoints(),
   variantImportant(),
   variantNegative,
   variantPseudoClassFunctions(),
-  variantPseudoClassesAndElements(),
+  variantPseudoClassesAndElements,
   ...variantTaggedPseudoClasses({ attributifyPseudo: false }),
 ];
 

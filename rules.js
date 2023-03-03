@@ -14,7 +14,7 @@ const componentsMap = {
   modal: "use Warp modal component instead",
   slider: "use Warp slider component instead",
   thumb: "use Warp slider component instead",
-  spinner: "",
+  spinner: "use w-spinner instead",
   grid: "",
   step: "use Warp steps component instead",
   switch: "use Warp switch component instead",
