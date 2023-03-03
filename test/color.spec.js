@@ -1,10 +1,8 @@
 import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { colors } from "../rules.js"
+import { colors, colorHues } from "../rules.js"
 
 setup();
-
-export const colorHues = Array.from({ length: 10 }, (_, index) => index === 0 ? 50 : index * 100); // 50, 100, 200, ..., 900
 
 describe("colors", () => {
   test("Emits a warning if text class is used with a color", async (t) => {

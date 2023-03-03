@@ -1,7 +1,6 @@
 import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { colors, } from "../rules.js"
-import { colorHues } from "./color.spec.js";
+import { colors, colorHues } from "../rules.js"
 
 setup();
 

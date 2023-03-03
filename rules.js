@@ -6,6 +6,7 @@ export const TYPES = {
 const emitWarning = (selector, deprecationType, message) => {console.warn(`${deprecationType} ${selector}${message ? " -> " + message : ""}`)}
 
 export const colors = ["blue", "green", "aqua", "yellow", "red", "bluegray", "gray"]
+export const colorHues = Array.from({ length: 10 }, (_, index) => index === 0 ? 50 : index * 100); // 50, 100, 200, ..., 900
 
 const colorRegex = new RegExp("^(text|bg|border|divide)-(" + colors.join("|") + ")(-(\\d+))?$")
 
