@@ -10,7 +10,7 @@ It will detect all deprecated CSS utility classes and print warnings with useful
 This UnoCSS preset is available via NPM.
 
 ```shell
-npm install -D @warp-ds/migrate
+npm install -D @warp-ds/preset-migrate
 ```
 
 ### Add the plugin to your Uno config
@@ -18,7 +18,7 @@ npm install -D @warp-ds/migrate
 ```js
 import { defineConfig } from 'unocss';
 import { presetWarp } from '@warp-ds/uno';
-import { presetMigrate } from '@warp-ds/migrate';
+import { presetMigrate } from '@warp-ds/preset-migrate';
 
 export default defineConfig({
   presets: [
