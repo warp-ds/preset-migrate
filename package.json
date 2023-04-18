@@ -8,8 +8,12 @@
     "test": "vitest",
     "commit": "cz"
   },
+  "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "rules.js",
+    "theme.js",
+    "_pseudo.js"
   ],
   "publishConfig": {
     "access": "public"
