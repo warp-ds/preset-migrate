@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/warp-ds/preset-migrate/compare/v1.0.0...v1.0.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* publish missing files and set main entry ([e7d80ea](https://github.com/warp-ds/preset-migrate/commit/e7d80ea31b138dcd1de8cc5c76dd5383a508696e))
+
 # 1.0.0 (2023-04-18)
 
 
