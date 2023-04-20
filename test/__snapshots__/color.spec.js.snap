@@ -9,22 +9,25 @@ exports[`colors > Emits a warning for color classes with pseudo 2`] = `
 ]
 `;
 
-exports[`colors > Emits a warning if 'text', 'bg', 'border' or 'divide' is used with 'current', 'transparent', 'none' or 'white' 2`] = `
+exports[`colors > Emits a warning if 'bg' is used with 'none' or 'white' 2`] = `
+[
+  "[REPLACED] bg-none",
+  "[REPLACED] bg-white",
+]
+`;
+
+exports[`colors > Emits a warning if 'text', 'border' or 'divide' is used with 'current', 'transparent', 'none' or 'white' 2`] = `
 [
   "[REPLACED] text-current",
-  "[REPLACED] bg-current",
   "[REPLACED] border-current",
   "[REPLACED] divide-current",
   "[REPLACED] text-transparent",
-  "[REPLACED] bg-transparent",
   "[REPLACED] border-transparent",
   "[REPLACED] divide-transparent",
   "[REPLACED] text-none",
-  "[REPLACED] bg-none",
   "[REPLACED] border-none",
   "[REPLACED] divide-none",
   "[REPLACED] text-white",
-  "[REPLACED] bg-white",
   "[REPLACED] border-white",
   "[REPLACED] divide-white",
 ]

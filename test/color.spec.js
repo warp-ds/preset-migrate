@@ -61,12 +61,24 @@ describe("colors", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
-  test("Emits a warning if 'text', 'bg', 'border' or 'divide' is used with 'current', 'transparent', 'none' or 'white'", async (t) => {
+  test("Emits a warning if 'text', 'border' or 'divide' is used with 'current', 'transparent', 'none' or 'white'", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
     const classes = ["current", "transparent", "none", "white"].map((color) =>{
-      return ["text", "bg", "border", "divide"].map(el => `${el}-${color}`)
+      return ["text", "border", "divide"].map(el => `${el}-${color}`)
     }).flat()
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
+  test("Emits a warning if 'bg' is used with 'none' or 'white'", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = ["bg-none", "bg-white"]
 
     const { css } = await t.uno.generate(classes);
 
