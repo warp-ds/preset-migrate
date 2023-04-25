@@ -36,7 +36,8 @@ const colorRegex = new RegExp("^(text|bg|border|divide)-(" + colors.join("|") + 
 
 export default [
   [colorRegex, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^(text|bg|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [/^(text|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
   [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced)],
   [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced)],
