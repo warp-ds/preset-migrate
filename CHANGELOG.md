@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/warp-ds/preset-migrate/compare/v1.0.1...v1.0.2) (2023-04-25)
+
+
+### Bug Fixes
+
+* **rules:** remove bg-transparent and bg-current from deprecated classes rules ([#4](https://github.com/warp-ds/preset-migrate/issues/4)) ([95af6f9](https://github.com/warp-ds/preset-migrate/commit/95af6f9b3220b112059bb05303fe1955b3a2cf42))
+
 ## [1.0.1](https://github.com/warp-ds/preset-migrate/compare/v1.0.0...v1.0.1) (2023-04-18)
 
 
