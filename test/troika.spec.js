@@ -24,6 +24,14 @@ test('prints NO warning for using non deprecated t', async ({ uno }) => {
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot('[]');
 });
 
+test('prints NO warning for using non deprecated page-container', async ({ uno }) => {
+  const warnSpy = vi.spyOn(global.console, 'warn');
+  const classes = ['page-container'];
+  const { css } = await uno.generate(classes);
+  expect(css).toMatchInlineSnapshot('""');
+  expect(warnSpy.calls.flat()).toMatchInlineSnapshot('[]');
+});
+
 test('prints a warning for using deprecated container with pseudo', async ({ uno }) => {
     const warnSpy = vi.spyOn(global.console, 'warn');
     const classes = ['md:container', 'md:t-grid'];
