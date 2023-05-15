@@ -6,7 +6,7 @@ export const TYPES = {
   removed: "[REMOVED]"
 }
 
-const componentsMap = {
+const classMap = {
   button: "use Warp button component instead",
   link: "use Warp button component instead",
   field: "use Warp form components instead",
@@ -24,11 +24,12 @@ const componentsMap = {
   tab: "use Warp tabs component instead",
   toast: "use Warp toast component instead",
   list: "use Warp list component instead",
+  text: `check ${TECH_DOCS_URL}/font-size for supported classes`,
 }
 
 export const emitWarning = (selector, deprecationType, message) => {
-  const component = Object.keys(componentsMap).find(key => selector.includes(key));
-  const warningMessage = component ? componentsMap[component] : message;
+  const className = Object.keys(classMap).find(key => selector.includes(key));
+  const warningMessage = !message && className ? classMap[className] : message;
   console.warn(`${deprecationType} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);
 }
 

@@ -1,4 +1,4 @@
-import { TYPES, colorRegex, emitWarning } from "./utils";
+import { TYPES, colorRegex, emitWarning } from "./utils.js";
 
 export default [
   [colorRegex, ([_]) => emitWarning(_, TYPES.replaced)],
@@ -6,7 +6,7 @@ export default [
   [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
   [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, "more info on replacements coming soon")],
   [/^aspect-([wh])-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],
