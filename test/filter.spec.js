@@ -1,6 +1,6 @@
 import { describe, expect, test, vi, beforeEach } from "vitest";
 import { setup } from "./_helpers.js";
-import { TYPES } from "../rules.js"
+import { TYPES } from "../utils.js"
 
 setup();
 

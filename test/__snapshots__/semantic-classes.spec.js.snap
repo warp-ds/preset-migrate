@@ -39,15 +39,15 @@ exports[`semantic classes > handles deprecated segment-control|field 2`] = `
 [
   "[REMOVED] field -> use Warp form components instead",
   "[REMOVED] field-hint -> use Warp form components instead",
-  "[REMOVED] segment-control__item -> use Warp button-group component instead",
-  "[REMOVED] segment-control--is-disabled -> use Warp button-group component instead",
-  "[REMOVED] segment-control -> use Warp button-group component instead",
+  "[REMOVED] segment-control__item -> use Warp button-group (Vue) or Toggle component instead",
+  "[REMOVED] segment-control--is-disabled -> use Warp button-group (Vue) or Toggle component instead",
+  "[REMOVED] segment-control -> use Warp button-group (Vue) or Toggle component instead",
 ]
 `;
 
 exports[`semantic classes > handles deprecated segment-control|field with pseudo 2`] = `
 [
   "[REMOVED] field -> use Warp form components instead",
-  "[REMOVED] segment-control__item -> use Warp button-group component instead",
+  "[REMOVED] segment-control__item -> use Warp button-group (Vue) or Toggle component instead",
 ]
 `;
