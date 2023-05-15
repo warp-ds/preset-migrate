@@ -10,7 +10,9 @@ export default [
   [/^aspect-([wh])-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],
-  [/^(drop-)?shadow(-(2|3|4|10|20|30|40|none))?$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [/^shadow-none$/, ([_]) => emitWarning(_,TYPES.removed)],
+  [/^shadow(-(2|3|4|10|20|30|40))?$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/box-shadow for supported shadow classes`)],
+  [/^drop-shadow(-(2|3|4|10|20|30|40|none))?$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
   [/^decoration-(slice|none|clone)/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^ring(?:-(.*))$/, ([_]) => emitWarning(_, TYPES.removed)],
   // filters
