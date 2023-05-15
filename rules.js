@@ -60,7 +60,8 @@ export default [
   [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed)],
   // old design system classes (troika)
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^(.+)?container$/, ([_]) => emitWarning('container', TYPES.removed)],
+  // Do not target page-container, but container class with pseudo variants
+  [/^([^page-].+)?container$/, ([_]) => emitWarning('container', TYPES.removed)],
   // miscellaneous
   [/^transition-gpu$/, ([_]) => emitWarning(_, TYPES.removed, "use 'transform-gpu' or 'will-change-*'")],
   [/^fixed-ios-fix$/,([_]) => emitWarning(_, TYPES.removed, "use 'transform translate-z-0'")],
