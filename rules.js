@@ -9,7 +9,7 @@ const componentsMap = {
   field: "use Warp form components instead",
   card: "use Warp card component instead",
   input: "use Warp input component instead",
-  segment: "use Warp button-group component instead",
+  segment: "use Warp button-group (Vue) or Toggle component instead",
   expandable: "use Warp expandable component instead",
   modal: "use Warp modal component instead",
   slider: "use Warp slider component instead",

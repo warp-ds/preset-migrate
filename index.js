@@ -19,7 +19,8 @@ const variants = [
 ];
 
 export const presetMigrate = () => {
-  console.log("Read more about supported classes here: https://warp-ds.github.io/css-docs/")
+  console.log("Read more about supported classes in Warp CSS Docs: https://warp-ds.github.io/css-docs/")
+  console.log("You can find currently supported components in Warp Tech Docs: https://warp-ds.github.io/tech-docs")
 
   return { name: '@warp-ds/preset-migrate', theme, rules, variants }
 } 
