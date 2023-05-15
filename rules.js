@@ -1,12 +1,12 @@
-import { TYPES, colorRegex, emitWarning } from "./utils.js";
+import { TYPES, colorRegex, COMING_SOON_MSG, emitWarning, CSS_DOCS_URL } from "./utils.js";
 
 export default [
-  [colorRegex, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^(text|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [colorRegex, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^(text|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced,COMING_SOON_MSG)],
   [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, "more info on replacements coming soon")],
+  [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/font-size for supported classes`)],
+  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
   [/^aspect-([wh])-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],
