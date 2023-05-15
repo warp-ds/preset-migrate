@@ -1,0 +1,21 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`leading > Emits a warning if used with numbers 2`] = `
+[
+  "[REPLACED] leading-1 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+  "[REPLACED] leading-12 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+  "[REPLACED] leading-14 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+  "[REPLACED] leading-16 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+  "[REPLACED] leading-20 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+  "[REPLACED] leading-24 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+  "[REPLACED] leading-36 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
+]
+`;
+
+exports[`leading > Emits a warning if used with pseudo 2`] = `
+[
+  "[REPLACED] text-primary -> more info on replacements coming soon",
+  "[REPLACED] text-secondary -> more info on replacements coming soon",
+  "[REPLACED] text-danger -> more info on replacements coming soon",
+]
+`;

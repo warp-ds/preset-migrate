@@ -7,6 +7,7 @@ export default [
   [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/font-size for supported classes`)],
   [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^leading-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/line-height for supported classes`)],
   [/^aspect-([wh])-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],

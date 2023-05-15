@@ -20,7 +20,7 @@ exports[`text > Emits a warning if used with numbers 2`] = `
 ]
 `;
 
-exports[`text > Emits a warning if used with numbers 4`] = `
+exports[`text > Emits a warning if used with pseudo 2`] = `
 [
   "[REPLACED] text-primary -> more info on replacements coming soon",
   "[REPLACED] text-secondary -> more info on replacements coming soon",
