@@ -18,28 +18,7 @@ describe("shadow", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
-      [
-        "[REPLACED] shadow",
-        "[REPLACED] drop-shadow",
-        "[REPLACED] shadow-2",
-        "[REPLACED] shadow-3",
-        "[REPLACED] shadow-4",
-        "[REPLACED] shadow-10",
-        "[REPLACED] shadow-20",
-        "[REPLACED] shadow-30",
-        "[REPLACED] shadow-40",
-        "[REPLACED] shadow-none",
-        "[REPLACED] drop-shadow-2",
-        "[REPLACED] drop-shadow-3",
-        "[REPLACED] drop-shadow-4",
-        "[REPLACED] drop-shadow-10",
-        "[REPLACED] drop-shadow-20",
-        "[REPLACED] drop-shadow-30",
-        "[REPLACED] drop-shadow-40",
-        "[REPLACED] drop-shadow-none",
-      ]
-    `);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
 
@@ -52,13 +31,6 @@ describe("shadow", () => {
 
     expect(css).toMatchInlineSnapshot('""');
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
-      [
-        "[REPLACED] drop-shadow",
-        "[REPLACED] shadow-20",
-        "[REPLACED] shadow-none",
-        "[REPLACED] shadow-40",
-      ]
-    `);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 })

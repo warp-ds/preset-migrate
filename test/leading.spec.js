@@ -1,22 +1,14 @@
 import { setup } from "./_helpers.js";
 import { describe, expect, test, vi } from "vitest";
-import { colors, colorHues } from "../utils.js"
 
 setup();
 
-const ringColorValues = colors.map((color) => {
-  const colors = colorHues.map(hue => `${color}-${hue}`)
-  const offsetColors = colors.map(color => `offset-${color}`)
-  return [...colors, ...offsetColors]
-}).flat()
 
-const ringValues = [...ringColorValues, 0, 1, 2, 4, 8, "inset", "offset-transparent"]
-
-describe("ring", () => {
-  test("Emits a warning if ring classes are used", async (t) => {
+describe("leading", () => {
+  test("Emits a warning if used with numbers", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
-    const classes = ringValues.map(el => `ring-${el}`)
+    const classes = ["leading-1", "leading-12", "leading-14", "leading-16", "leading-20", "leading-24", "leading-36"]
 
     const { css } = await t.uno.generate(classes);
 
@@ -25,11 +17,10 @@ describe("ring", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
-
   test("Emits a warning if used with pseudo", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
-    const classes = ["lg:ring-2", "md:ring-8", "active:ring-inset", "active:ring-offset-transparent", "!ring-offset-yellow-400", "hover:ring-blue-500"]
+    const classes = ["md:text-primary", "active:text-secondary", "!text-danger"]
 
     const { css } = await t.uno.generate(classes);
 

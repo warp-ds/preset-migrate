@@ -1,50 +1,19 @@
-export const TYPES = {
-  replaced: "[REPLACED]",
-  removed: "[REMOVED]"
-}
-
-const componentsMap = {
-  button: "use Warp button component instead",
-  link: "use Warp button component instead",
-  field: "use Warp form components instead",
-  card: "use Warp card component instead",
-  input: "use Warp input component instead",
-  segment: "use Warp button-group component instead",
-  expandable: "use Warp expandable component instead",
-  modal: "use Warp modal component instead",
-  slider: "use Warp slider component instead",
-  thumb: "use Warp slider component instead",
-  spinner: "use w-spinner instead",
-  grid: "",
-  step: "use Warp steps component instead",
-  switch: "use Warp switch component instead",
-  tab: "use Warp tabs component instead",
-  toast: "use Warp toast component instead",
-  list: "use Warp list component instead",
-}
-
-const emitWarning = (selector, deprecationType, message) => {
-  const component = Object.keys(componentsMap).find(key => selector.includes(key));
-  const warningMessage = component ? componentsMap[component] : message;
-  console.warn(`${deprecationType} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);
-}
-
-export const colors = ["blue", "green", "aqua", "yellow", "red", "bluegray", "gray"]
-export const colorHues = Array.from({ length: 10 }, (_, index) => index === 0 ? 50 : index * 100); // 50, 100, 200, ..., 900
-
-const colorRegex = new RegExp("^(text|bg|border|divide)-(" + colors.join("|") + ")(-(\\d+))?$")
+import { TYPES, colorRegex, COMING_SOON_MSG, emitWarning, CSS_DOCS_URL } from "./utils.js";
 
 export default [
-  [colorRegex, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^(text|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [colorRegex, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^(text|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced,COMING_SOON_MSG)],
   [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced)],
-  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/font-size for supported classes`)],
+  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^leading-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/line-height for supported classes`)],
   [/^aspect-([wh])-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],
-  [/^(drop-)?shadow(-(2|3|4|10|20|30|40|none))?$/, ([_]) => emitWarning(_, TYPES.replaced)],
+  [/^shadow-none$/, ([_]) => emitWarning(_,TYPES.removed)],
+  [/^shadow(-(2|3|4|10|20|30|40))?$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/box-shadow for supported shadow classes`)],
+  [/^drop-shadow(-(2|3|4|10|20|30|40|none))?$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
   [/^decoration-(slice|none|clone)/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^ring(?:-(.*))$/, ([_]) => emitWarning(_, TYPES.removed)],
   // filters
