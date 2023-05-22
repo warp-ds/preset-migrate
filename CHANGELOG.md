@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/warp-ds/preset-migrate/compare/v1.0.3...v1.0.4) (2023-05-22)
+
+
+### Bug Fixes
+
+* update hints and add warnings for leading- classes ([#7](https://github.com/warp-ds/preset-migrate/issues/7)) ([e45a650](https://github.com/warp-ds/preset-migrate/commit/e45a6503083996d515592fc730711d9708885df7))
+
 ## [1.0.3](https://github.com/warp-ds/preset-migrate/compare/v1.0.2...v1.0.3) (2023-05-15)
 
 
