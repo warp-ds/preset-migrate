@@ -13,7 +13,8 @@
     "index.js",
     "rules.js",
     "theme.js",
-    "_pseudo.js"
+    "_pseudo.js",
+    "utils.js"
   ],
   "publishConfig": {
     "access": "public"
