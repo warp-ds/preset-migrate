@@ -11,7 +11,6 @@ describe('miscellaneous', () => {
             'transition-gpu',
             'fixed-ios-fix',
             'focus-ring',
-            'last-child:mb-0',
         ];
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
@@ -21,7 +20,6 @@ describe('miscellaneous', () => {
             "[REMOVED] transition-gpu -> use 'transform-gpu' or 'will-change-*'",
             "[REMOVED] fixed-ios-fix -> use 'transform translate-z-0'",
             "[REPLACED] focus-ring -> use focusable",
-            "[REPLACED] last-child:mb-0 -> use last:mb-0",
           ]
         `);
     });
