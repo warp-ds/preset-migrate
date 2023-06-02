@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/warp-ds/preset-migrate/compare/v1.0.5...v1.0.6) (2023-06-02)
+
+
+### Bug Fixes
+
+* **package.json:** include utils file to package library ([cc32d56](https://github.com/warp-ds/preset-migrate/commit/cc32d56ded90a547fd8282410190de36999332a5))
+
 ## [1.0.5](https://github.com/warp-ds/preset-migrate/compare/v1.0.4...v1.0.5) (2023-06-02)
 
 
