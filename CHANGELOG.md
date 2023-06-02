@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/warp-ds/preset-migrate/compare/v1.0.4...v1.0.5) (2023-06-02)
+
+
+### Bug Fixes
+
+* update rules and clean up after latest changes in drive ([#9](https://github.com/warp-ds/preset-migrate/issues/9)) ([06a7899](https://github.com/warp-ds/preset-migrate/commit/06a7899541d0990ecdcea0737a18743a05914ef4))
+
 ## [1.0.4](https://github.com/warp-ds/preset-migrate/compare/v1.0.3...v1.0.4) (2023-05-22)
 
 
