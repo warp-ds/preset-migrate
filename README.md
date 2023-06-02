@@ -34,12 +34,12 @@ You can also check if a CSS utility class is deprecated using the `pnpm dev` (or
 
 _Example_
 ```shell
-pnpm dev last-child:mb-0
+pnpm dev focus-ring
 ```
 
 _This example prints the following output:_
 ```shell
-[REPLACED] last-child:mb-0 -> use last:mb-0
+[REPLACED] focus-ring -> focusable ->
 ```
 
 ## Releases
