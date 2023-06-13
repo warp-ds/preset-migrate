@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/warp-ds/preset-migrate/compare/v1.0.6...v1.0.7) (2023-06-13)
+
+
+### Bug Fixes
+
+* merge unocss code latest changes, get rid of sortValue function ([#10](https://github.com/warp-ds/preset-migrate/issues/10)) ([e90e9f1](https://github.com/warp-ds/preset-migrate/commit/e90e9f139a6c1eb05893ec78d35c36ff7131936a))
+
 ## [1.0.6](https://github.com/warp-ds/preset-migrate/compare/v1.0.5...v1.0.6) (2023-06-02)
 
 
