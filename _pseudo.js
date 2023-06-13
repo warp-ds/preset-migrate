@@ -49,10 +49,14 @@ const PseudoClasses = Object.fromEntries([
   ['marker', '::marker'],
   ['file', '::file-selector-button'],
 ].map(key => Array.isArray(key) ? key : [key, `:${key}`]));
-// TODO - rip this out
+
+const PseudoClassesKeys = Object.keys(PseudoClasses)
+
 const PseudoClassesColon = Object.fromEntries([
   ['backdrop', '::backdrop'],
 ].map(key => Array.isArray(key) ? key : [key, `:${key}`]));
+
+const PseudoClassesColonKeys = Object.keys(PseudoClassesColon)
 
 
 const PseudoClassesAndElementsStr = Object.entries(PseudoClasses).map(([key]) => key).join('|');
@@ -66,6 +70,14 @@ export const variantPseudoClassesAndElements = {
     const match = input.match(PseudoClassesAndElementsRE) || input.match(PseudoClassesAndElementsColonRE);
     if (match) {
       const pseudo = PseudoClasses[match[1]] || PseudoClassesColon[match[1]] || `:${match[1]}`;
+
+      // order of pseudo classes
+      let index = PseudoClassesKeys.indexOf(match[1])
+      if (index === -1)
+        index = PseudoClassesColonKeys.indexOf(match[1])
+      if (index === -1)
+        index = undefined
+      
       return {
         matcher: input.slice(match[0].length),
         handle: (input, next) => {
@@ -75,8 +87,9 @@ export const variantPseudoClassesAndElements = {
           return next({
             ...input,
             ...selectors,
-            sort: sortValue(match[1]),
-          });
+            sort: index,
+            noMerge: true,
+        });
         },
       };
     }
