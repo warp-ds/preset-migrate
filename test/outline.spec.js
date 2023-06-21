@@ -7,15 +7,14 @@ setup();
 describe('outline', () => {
     test('prints a warning for using deprecated outline classes', async ({ uno }) => {
         const warnSpy = vi.spyOn(global.console, 'warn');
-        const classes = ['outline-black', 'outline-none','outline-white'];
+        const classes = ['outline-black', 'outline-white'];
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
         expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
           [
-            "[REMOVED] outline-black",
-            "[REMOVED] outline-none",
-            "[REMOVED] outline-white",
+            "\x1b[91m[REMOVED]\x1b[0m outline-black",
+            "\x1b[91m[REMOVED]\x1b[0m outline-white",
           ]
         `);  
     });

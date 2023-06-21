@@ -11,8 +11,8 @@ test('prints a warning for using deprecated container and t-*', async ({ uno }) 
     expect(warnSpy).toHaveBeenCalledTimes(2);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] container",
-        "[REMOVED] t-grid",
+        "\x1b[91m[REMOVED]\x1b[0m container",
+        "\x1b[91m[REMOVED]\x1b[0m t-grid",
       ]
     `);
 });
@@ -40,8 +40,8 @@ test('prints a warning for using deprecated container with pseudo', async ({ uno
     expect(warnSpy).toHaveBeenCalledTimes(2);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] container",
-        "[REMOVED] t-grid",
+        "\x1b[91m[REMOVED]\x1b[0m container",
+        "\x1b[91m[REMOVED]\x1b[0m t-grid",
       ]
     `);
 });

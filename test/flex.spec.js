@@ -16,10 +16,10 @@ describe("flex", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REPLACED] flex-shrink -> use shrink",
-        "[REPLACED] flex-shrink-0 -> use shrink-0",
-        "[REPLACED] flex-grow -> use grow",
-        "[REPLACED] flex-grow-0 -> use grow-0",
+        "\x1b[93m[REPLACED]\x1b[0m flex-shrink -> use shrink",
+        "\x1b[93m[REPLACED]\x1b[0m flex-shrink-0 -> use shrink-0",
+        "\x1b[93m[REPLACED]\x1b[0m flex-grow -> use grow",
+        "\x1b[93m[REPLACED]\x1b[0m flex-grow-0 -> use grow-0",
       ]
     `);
   });
@@ -35,10 +35,10 @@ describe("flex", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REPLACED] flex-shrink -> use shrink",
-        "[REPLACED] flex-shrink-0 -> use shrink-0",
-        "[REPLACED] flex-grow -> use grow",
-        "[REPLACED] flex-grow-0 -> use grow-0",
+        "\x1b[93m[REPLACED]\x1b[0m flex-shrink -> use shrink",
+        "\x1b[93m[REPLACED]\x1b[0m flex-shrink-0 -> use shrink-0",
+        "\x1b[93m[REPLACED]\x1b[0m flex-grow -> use grow",
+        "\x1b[93m[REPLACED]\x1b[0m flex-grow-0 -> use grow-0",
       ]
     `);
   });

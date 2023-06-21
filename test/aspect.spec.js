@@ -16,8 +16,8 @@ describe("aspect", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REPLACED] aspect-w-2 -> use fractions instead, e.g. aspect-4/3",
-        "[REPLACED] aspect-h-4 -> use fractions instead, e.g. aspect-4/3",
+        "\x1b[93m[REPLACED]\x1b[0m aspect-w-2 -> use fractions instead, e.g. aspect-4/3",
+        "\x1b[93m[REPLACED]\x1b[0m aspect-h-4 -> use fractions instead, e.g. aspect-4/3",
       ]
     `);
   });
@@ -33,8 +33,8 @@ describe("aspect", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REPLACED] aspect-w-8 -> use fractions instead, e.g. aspect-4/3",
-        "[REPLACED] aspect-h-3 -> use fractions instead, e.g. aspect-4/3",
+        "\x1b[93m[REPLACED]\x1b[0m aspect-w-8 -> use fractions instead, e.g. aspect-4/3",
+        "\x1b[93m[REPLACED]\x1b[0m aspect-h-3 -> use fractions instead, e.g. aspect-4/3",
       ]
     `);
   });
@@ -50,7 +50,7 @@ describe("aspect", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] aspect-none",
+        "\x1b[91m[REMOVED]\x1b[0m aspect-none",
       ]
     `);
   });
@@ -66,8 +66,8 @@ describe("aspect", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] aspect-none",
-        "[REMOVED] aspect-none",
+        "\x1b[91m[REMOVED]\x1b[0m aspect-none",
+        "\x1b[91m[REMOVED]\x1b[0m aspect-none",
       ]
     `);
   });
