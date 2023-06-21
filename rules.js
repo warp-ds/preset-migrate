@@ -1,12 +1,22 @@
-import { TYPES, colorRegex, COMING_SOON_MSG, emitWarning, CSS_DOCS_URL } from "./utils.js";
+import {
+  TYPES,
+  COLOR_REGEXPS,
+  COMING_SOON_MSG,
+  emitWarning,
+  CSS_DOCS_URL,
+  COLOR_MESSAGES,
+} from "./utils.js";
 
 export default [
-  [colorRegex, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
-  [/^(text|border|divide)-(current|transparent|none|white)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
-  [/^bg-(none|white)$/, ([_]) => emitWarning(_, TYPES.replaced,COMING_SOON_MSG)],
-  [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [COLOR_REGEXPS.border, ([_]) => emitWarning(_, TYPES.replaced, COLOR_MESSAGES.border)],
+  [COLOR_REGEXPS.background, ([_]) => emitWarning(_, TYPES.replaced, COLOR_MESSAGES.background)],
+  [/^bg-none$/, ([_]) => emitWarning(_, TYPES.replaced,COMING_SOON_MSG)],
+  [COLOR_REGEXPS.text, ([_]) => emitWarning(_, TYPES.replaced, COLOR_MESSAGES.text)],
+  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, COLOR_MESSAGES.text)],
   [/^text-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/font-size for supported classes`)],
-  [/^text-(primary|secondary|danger)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [COLOR_REGEXPS.divide, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^divide-(current|transparent|none)$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^divide-(dotted|solid|double|dashed)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^leading-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/line-height for supported classes`)],
   [/^aspect-([wh])-(\d+)$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^aspect-none$/, ([_]) => emitWarning(_, TYPES.removed)],
@@ -23,7 +33,7 @@ export default [
   [/^(backdrop-)?(invert|sepia)(-0)?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^backdrop-opacity-(\d+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // outline
-  [/^outline-(none|white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^outline-(white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // semantic classes
   [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed)],
