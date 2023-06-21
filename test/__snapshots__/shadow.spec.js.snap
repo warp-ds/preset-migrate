@@ -2,32 +2,32 @@
 
 exports[`shadow > Emits a warning if drop-shadow or shadow classes are used 2`] = `
 [
-  "[REPLACED] shadow -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] drop-shadow -> more info on replacements coming soon",
-  "[REPLACED] shadow-2 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] shadow-3 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] shadow-4 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] shadow-10 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] shadow-20 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] shadow-30 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REPLACED] shadow-40 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REMOVED] shadow-none",
-  "[REPLACED] drop-shadow-2 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-3 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-4 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-10 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-20 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-30 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-40 -> more info on replacements coming soon",
-  "[REPLACED] drop-shadow-none -> more info on replacements coming soon",
+  "[93m[REPLACED][0m shadow -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m drop-shadow -> more info on replacements coming soon",
+  "[93m[REPLACED][0m shadow-2 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m shadow-3 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m shadow-4 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m shadow-10 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m shadow-20 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m shadow-30 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m shadow-40 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[91m[REMOVED][0m shadow-none",
+  "[93m[REPLACED][0m drop-shadow-2 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-3 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-4 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-10 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-20 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-30 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-40 -> more info on replacements coming soon",
+  "[93m[REPLACED][0m drop-shadow-none -> more info on replacements coming soon",
 ]
 `;
 
 exports[`shadow > Emits a warning if used with pseudo 2`] = `
 [
-  "[REPLACED] drop-shadow -> more info on replacements coming soon",
-  "[REPLACED] shadow-20 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
-  "[REMOVED] shadow-none",
-  "[REPLACED] shadow-40 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[93m[REPLACED][0m drop-shadow -> more info on replacements coming soon",
+  "[93m[REPLACED][0m shadow-20 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
+  "[91m[REMOVED][0m shadow-none",
+  "[93m[REPLACED][0m shadow-40 -> check https://warp-ds.github.io/css-docs/box-shadow for supported shadow classes",
 ]
 `;

@@ -16,10 +16,10 @@ describe("divide", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] divide-dotted",
-        "[REMOVED] divide-solid",
-        "[REMOVED] divide-double",
-        "[REMOVED] divide-dashed",
+        "\x1b[91m[REMOVED]\x1b[0m divide-dotted",
+        "\x1b[91m[REMOVED]\x1b[0m divide-solid",
+        "\x1b[91m[REMOVED]\x1b[0m divide-double",
+        "\x1b[91m[REMOVED]\x1b[0m divide-dashed",
       ]
     `);
   });
@@ -36,10 +36,10 @@ describe("divide", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] divide-dotted",
-        "[REMOVED] divide-solid",
-        "[REMOVED] divide-double",
-        "[REMOVED] divide-dashed",
+        "\x1b[91m[REMOVED]\x1b[0m divide-dotted",
+        "\x1b[91m[REMOVED]\x1b[0m divide-solid",
+        "\x1b[91m[REMOVED]\x1b[0m divide-double",
+        "\x1b[91m[REMOVED]\x1b[0m divide-dashed",
       ]
     `);
   });

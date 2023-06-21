@@ -2,28 +2,28 @@
 
 exports[`text > Emits a warning if used with 'primary', 'secondary' or 'danger' 2`] = `
 [
-  "[REPLACED] text-primary -> more info on replacements coming soon",
-  "[REPLACED] text-secondary -> more info on replacements coming soon",
-  "[REPLACED] text-danger -> more info on replacements coming soon",
+  "[93m[REPLACED][0m text-primary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m text-secondary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m text-danger -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
 ]
 `;
 
 exports[`text > Emits a warning if used with numbers 2`] = `
 [
-  "[REPLACED] text-1 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
-  "[REPLACED] text-12 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
-  "[REPLACED] text-14 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
-  "[REPLACED] text-16 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
-  "[REPLACED] text-20 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
-  "[REPLACED] text-24 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
-  "[REPLACED] text-36 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-1 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-12 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-14 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-16 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-20 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-24 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
+  "[93m[REPLACED][0m text-36 -> check https://warp-ds.github.io/css-docs/font-size for supported classes",
 ]
 `;
 
 exports[`text > Emits a warning if used with pseudo 2`] = `
 [
-  "[REPLACED] text-primary -> more info on replacements coming soon",
-  "[REPLACED] text-secondary -> more info on replacements coming soon",
-  "[REPLACED] text-danger -> more info on replacements coming soon",
+  "[93m[REPLACED][0m text-primary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m text-secondary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m text-danger -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
 ]
 `;

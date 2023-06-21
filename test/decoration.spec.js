@@ -15,9 +15,9 @@ describe("decoration", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] decoration-slice",
-        "[REMOVED] decoration-none",
-        "[REMOVED] decoration-clone",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-slice",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-none",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-clone",
       ]
     `);
   });
@@ -34,9 +34,9 @@ describe("decoration", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
-        "[REMOVED] decoration-slice",
-        "[REMOVED] decoration-none",
-        "[REMOVED] decoration-clone",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-slice",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-none",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-clone",
       ]
     `);
   });
