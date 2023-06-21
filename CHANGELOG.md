@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/warp-ds/preset-migrate/compare/v1.0.7...v1.0.8) (2023-06-21)
+
+
+### Bug Fixes
+
+* Improve console output and messages for colors ([#11](https://github.com/warp-ds/preset-migrate/issues/11)) ([975cba2](https://github.com/warp-ds/preset-migrate/commit/975cba2db8f698e97ddf6af7b05ae60f1e10a8da))
+
 ## [1.0.7](https://github.com/warp-ds/preset-migrate/compare/v1.0.6...v1.0.7) (2023-06-13)
 
 
