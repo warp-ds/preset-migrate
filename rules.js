@@ -46,5 +46,8 @@ export default [
   [/^fixed-ios-fix$/,([_]) => emitWarning(_, TYPES.removed, "use 'transform translate-z-0'")],
   [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.replaced, "use 'focusable'")],
   // deprecated Warp classes
-  [/^s-(.+)-default$/, ([_]) => emitWarning(_, TYPES.deprecated, `use '${_.replace('-default', '')}'`)]
+  [/^s-(.+)-default$/, ([_]) => emitWarning(_, TYPES.deprecated, `use '${_.replace('-default', '')}'`)],
+  [/^color-focused?$/, ([_]) => emitWarning(_, TYPES.deprecated, "use 's-focused'")],
+  [/^color-background(-.+)?$/, ([_]) => emitWarning(_, TYPES.deprecated, COLOR_MESSAGES.background)],
+  [/^color-text(-.+)?$/, ([_]) => emitWarning(_, TYPES.deprecated, COLOR_MESSAGES.text)],
 ]

@@ -38,4 +38,30 @@ describe("deprecated warp classes", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
+
+  test("Emits a warning if color classes without s- suffix are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+    'color-focused',
+    'color-background',
+    'color-background-subtle',
+    'color-background-interactive',
+    'color-background-interactive-hover',
+    'color-background-interactive-selected',
+    'color-text',
+    'color-text-subtle',
+    'color-text-placeholder',
+    'color-text-inverted',
+    'color-text-inverted-subtle',
+    'color-text-link',
+    'color-text-link-hover',
+    'color-text-link-visited',]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
 })

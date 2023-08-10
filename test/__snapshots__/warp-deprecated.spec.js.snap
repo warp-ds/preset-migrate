@@ -1,5 +1,24 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`deprecated warp classes > Emits a warning if color classes without s- suffix are found 2`] = `
+[
+  "[93m[DEPRECATED][0m color-focused -> use 's-focused'",
+  "[93m[DEPRECATED][0m color-background -> see https://warp-ds.github.io/css-docs/background-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-background-subtle -> see https://warp-ds.github.io/css-docs/background-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-background-interactive -> see https://warp-ds.github.io/css-docs/background-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-background-interactive-hover -> see https://warp-ds.github.io/css-docs/background-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-background-interactive-selected -> see https://warp-ds.github.io/css-docs/background-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-subtle -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-placeholder -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-inverted -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-inverted-subtle -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-link -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-link-hover -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[DEPRECATED][0m color-text-link-visited -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if semantic color classes used with -default suffix are found 2`] = `
 [
   "[93m[DEPRECATED][0m s-color-background-default -> use 's-color-background'",
