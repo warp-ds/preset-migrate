@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`deprecated warp classes > Emits a warning if semantic color classes used with -default suffix are found 2`] = `
+[
+  "[93m[DEPRECATED][0m s-color-background-default -> use 's-color-background'",
+  "[93m[DEPRECATED][0m s-color-background-subtle-default -> use 's-color-background-subtle'",
+  "[93m[DEPRECATED][0m s-color-background-primary-default -> use 's-color-background-primary'",
+  "[93m[DEPRECATED][0m s-color-background-positive-default -> use 's-color-background-positive'",
+  "[93m[DEPRECATED][0m s-color-background-negative-default -> use 's-color-background-negative'",
+  "[93m[DEPRECATED][0m s-color-background-warning-default -> use 's-color-background-warning'",
+  "[93m[DEPRECATED][0m s-color-background-info-default -> use 's-color-background-info'",
+  "[93m[DEPRECATED][0m s-color-border-default -> use 's-color-border'",
+  "[93m[DEPRECATED][0m s-color-border-primary-default -> use 's-color-border-primary'",
+  "[93m[DEPRECATED][0m s-color-border-primary-subtle-default -> use 's-color-border-primary-subtle'",
+  "[93m[DEPRECATED][0m s-color-border-positive-default -> use 's-color-border-positive'",
+  "[93m[DEPRECATED][0m s-color-border-positive-subtle-default -> use 's-color-border-positive-subtle'",
+  "[93m[DEPRECATED][0m s-color-border-negative-default -> use 's-color-border-negative'",
+  "[93m[DEPRECATED][0m s-color-border-negative-subtle-default -> use 's-color-border-negative-subtle'",
+  "[93m[DEPRECATED][0m s-color-border-warning-default -> use 's-color-border-warning'",
+  "[93m[DEPRECATED][0m s-color-border-warning-subtle-default -> use 's-color-border-warning-subtle'",
+  "[93m[DEPRECATED][0m s-color-border-info-default -> use 's-color-border-info'",
+  "[93m[DEPRECATED][0m s-color-border-info-subtle-default -> use 's-color-border-info-subtle'",
+  "[93m[DEPRECATED][0m s-color-icon-default -> use 's-color-icon'",
+  "[93m[DEPRECATED][0m s-color-icon-subtle-default -> use 's-color-icon-subtle'",
+  "[93m[DEPRECATED][0m s-color-text-default -> use 's-color-text'",
+]
+`;

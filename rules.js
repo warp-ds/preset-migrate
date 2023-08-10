@@ -45,4 +45,6 @@ export default [
   [/^transition-gpu$/, ([_]) => emitWarning(_, TYPES.removed, "use 'transform-gpu' or 'will-change-*'")],
   [/^fixed-ios-fix$/,([_]) => emitWarning(_, TYPES.removed, "use 'transform translate-z-0'")],
   [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.replaced, "use 'focusable'")],
+  // deprecated Warp classes
+  [/^s-(.+)-default$/, ([_]) => emitWarning(_, TYPES.deprecated, `use '${_.replace('-default', '')}'`)]
 ]
