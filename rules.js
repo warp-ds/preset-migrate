@@ -35,8 +35,11 @@ export default [
   // outline
   [/^outline-(white|black)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // semantic classes
-  [/^(button|input|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^(link|segment-control|field)(.+)?$/,([_]) => emitWarning(_, TYPES.removed)],
+  [/^(button|f)(-(.+))?$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^input(--is-invalid|--is-disabled|--is-select__wrap|--is-read-only|-toggle)?$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^segment-control((-|_).+)?$/,([_]) => emitWarning(_, TYPES.removed)],
+  [/^field(-hint|-label|)?$/,([_]) => emitWarning(_, TYPES.removed)],
+  [/^link(--(block|dark))?$/,([_]) => emitWarning(_, TYPES.removed)],
   // old design system classes (troika)
   [/^t-(.+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // Do not target page-container, but container class with pseudo variants
