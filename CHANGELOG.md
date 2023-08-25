@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/warp-ds/preset-migrate/compare/v1.0.8...v1.1.0) (2023-08-25)
+
+
+### Features
+
+* add warnings for deprecated warp classes ([#12](https://github.com/warp-ds/preset-migrate/issues/12)) ([ab980c0](https://github.com/warp-ds/preset-migrate/commit/ab980c0b590ce5c3681aebe4636c5126b93c6a1b))
+
 ## [1.0.8](https://github.com/warp-ds/preset-migrate/compare/v1.0.7...v1.0.8) (2023-06-21)
 
 
