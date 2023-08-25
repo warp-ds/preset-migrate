@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/warp-ds/preset-migrate/compare/v1.1.0...v1.1.1) (2023-08-25)
+
+
+### Bug Fixes
+
+* make rules more specific ([#13](https://github.com/warp-ds/preset-migrate/issues/13)) ([086bd09](https://github.com/warp-ds/preset-migrate/commit/086bd09fce18c9b6e29e3e97d19d76b107f13346))
+
 # [1.1.0](https://github.com/warp-ds/preset-migrate/compare/v1.0.8...v1.1.0) (2023-08-25)
 
 
