@@ -39,6 +39,52 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if semantic color classes used with -active-hover suffix are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      's-bg-active-hover',
+      's-bg-subtle-active-hover',
+      's-bg-primary-active-hover',
+      's-bg-negative-active-hover',
+      's-bg-positive-active-hover',
+      's-bg-warning-active-hover',
+      's-bg-info-active-hover',
+      's-bg-info-subtle-active-hover',
+      's-border-active-hover',
+      's-border-subtle-active-hover',
+      's-border-primary-active-hover',
+      's-border-negative-active-hover',
+      's-border-positive-active-hover',
+      's-border-warning-active-hover',
+      's-border-info-active-hover',
+      's-border-info-subtle-active-hover',
+      's-icon-active-hover',
+      's-icon-subtle-active-hover'
+    ]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
+  test("Emits a warning if 's-text-link-hover' or 's-text-link-hover-active' are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      's-text-link-hover',
+      's-text-link-hover-active',
+    ]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if color classes without s- suffix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 

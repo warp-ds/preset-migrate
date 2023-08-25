@@ -50,6 +50,8 @@ export default [
   [/^focus-ring$/,  ([_]) => emitWarning(_, TYPES.replaced, "use 'focusable'")],
   // deprecated Warp classes
   [/^s-(.+)-default$/, ([_]) => emitWarning(_, TYPES.deprecated, `use '${_.replace('-default', '')}'`)],
+  [/^s-text-link-hover(-active)?$/, ([_]) => emitWarning(_, TYPES.deprecated, `use 's-text-link'`)],
+  [/^s-(.+)-active-hover$/, ([_]) => emitWarning(_, TYPES.deprecated, `use classes with '-selected-hover' if available'`)],
   [/^color-focused?$/, ([_]) => emitWarning(_, TYPES.deprecated, "use 's-focused'")],
   [/^color-background(-.+)?$/, ([_]) => emitWarning(_, TYPES.deprecated, COLOR_MESSAGES.background)],
   [/^color-text(-.+)?$/, ([_]) => emitWarning(_, TYPES.deprecated, COLOR_MESSAGES.text)],
