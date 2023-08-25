@@ -19,7 +19,8 @@ export const COLOR_MESSAGES = {
 
 export const TYPES = {
   replaced: "[REPLACED]",
-  removed: "[REMOVED]"
+  removed: "[REMOVED]",
+  deprecated: "[DEPRECATED]",
 };
 
 const CLASS_MAP = {
