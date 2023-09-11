@@ -1,22 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`filter > prints a warning for using deprecated (backdrop) blur filter 2`] = `
-[
-  "[91m[REMOVED][0m blur-sm",
-  "[91m[REMOVED][0m backdrop-blur-sm",
-  "[91m[REMOVED][0m blur-md",
-  "[91m[REMOVED][0m backdrop-blur-md",
-  "[91m[REMOVED][0m blur-lg",
-  "[91m[REMOVED][0m backdrop-blur-lg",
-  "[91m[REMOVED][0m blur-xl",
-  "[91m[REMOVED][0m backdrop-blur-xl",
-  "[91m[REMOVED][0m blur-2xl",
-  "[91m[REMOVED][0m backdrop-blur-2xl",
-  "[91m[REMOVED][0m blur-3xl",
-  "[91m[REMOVED][0m backdrop-blur-3xl",
-]
-`;
-
 exports[`filter > prints a warning for using deprecated backdrop opacity filter 2`] = `
 [
   "[91m[REMOVED][0m backdrop-opacity-0",
@@ -34,6 +17,27 @@ exports[`filter > prints a warning for using deprecated backdrop opacity filter 
   "[91m[REMOVED][0m backdrop-opacity-90",
   "[91m[REMOVED][0m backdrop-opacity-95",
   "[91m[REMOVED][0m backdrop-opacity-100",
+]
+`;
+
+exports[`filter > prints a warning for using deprecated backdrop-blur filter 2`] = `
+[
+  "[93m[REPLACED][0m backdrop-blur-sm -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[93m[REPLACED][0m backdrop-blur-md -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[93m[REPLACED][0m backdrop-blur-lg -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[93m[REPLACED][0m backdrop-blur-2xl -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[93m[REPLACED][0m backdrop-blur-3xl -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+]
+`;
+
+exports[`filter > prints a warning for using deprecated blur filter 2`] = `
+[
+  "[91m[REMOVED][0m blur-sm",
+  "[91m[REMOVED][0m blur-md",
+  "[91m[REMOVED][0m blur-lg",
+  "[91m[REMOVED][0m blur-xl",
+  "[91m[REMOVED][0m blur-2xl",
+  "[91m[REMOVED][0m blur-3xl",
 ]
 `;
 
@@ -132,7 +136,6 @@ exports[`filter > prints a warning for using deprecated filters brightness|contr
 
 exports[`filter > prints a warning for using deprecated filters with static values 2`] = `
 [
-  "[91m[REMOVED][0m backdrop-blur",
   "[91m[REMOVED][0m backdrop-filter",
   "[91m[REMOVED][0m backdrop-filter-none",
   "[91m[REMOVED][0m backdrop-invert-0",
