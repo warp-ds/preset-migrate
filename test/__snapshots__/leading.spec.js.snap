@@ -15,7 +15,7 @@ exports[`leading > Emits a warning if used with numbers 2`] = `
 exports[`leading > Emits a warning if used with pseudo 2`] = `
 [
   "[93m[REPLACED][0m text-primary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
-  "[93m[REPLACED][0m text-secondary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
   "[93m[REPLACED][0m text-danger -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m text-secondary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
 ]
 `;

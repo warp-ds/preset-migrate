@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@unocss/preset-mini':
-    specifier: ^0.50.1
-    version: 0.50.1
+    specifier: ^0.56.0
+    version: 0.56.0
 
 devDependencies:
   '@semantic-release/changelog':
@@ -13,8 +13,8 @@ devDependencies:
     specifier: ^10.0.1
     version: 10.0.1(semantic-release@21.0.1)
   '@unocss/core':
-    specifier: ^0.49.4
-    version: 0.49.4
+    specifier: ^0.56.0
+    version: 0.56.0
   cz-conventional-changelog:
     specifier: ^3.3.0
     version: 3.3.0
@@ -676,18 +676,28 @@ packages:
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
     dev: true
 
-  /@unocss/core@0.49.4:
-    resolution: {integrity: sha512-1RNV+KBgRo0uuaa5Etwc5cfxkdhJelIXRFz3LeXBOU4dIrTzBAMr352M+oZ/nnkbnAROGf3icTE0UcmSaCA2RQ==}
-    dev: true
+  /@unocss/core@0.56.0:
+    resolution: {integrity: sha512-KpaEMCg5XnTK7aQRgwNWoPCAFLEmPGjw+OSZWuMtkGvMr4RwDAVUAqPdGyGOavKMyWs+Is+lxXL5NHy9nhZ2oA==}
 
-  /@unocss/core@0.50.1:
-    resolution: {integrity: sha512-jnWClMMGybzyXcRX4DY+g/DJ4JrH9w8YN/H6OTHt0WyrNfR1V3ebJtEc6gbqCkZCh2XmqSA5F49QPhTbErYePg==}
+  /@unocss/extractor-arbitrary-variants@0.56.0:
+    resolution: {integrity: sha512-OtdDsief0sqzYkS0GH9+LYUWojOjisjYjk5nLBI9lMfU23l/G76T2BzN8/W19MjUEs80relP4nO/ruefJn0hvw==}
+    dependencies:
+      '@unocss/core': 0.56.0
     dev: false
 
-  /@unocss/preset-mini@0.50.1:
-    resolution: {integrity: sha512-asAJHsgNKbfH5aANuaA/1Q0efWPWalGSlLa9V73JXyXO4fbFT86m3o65NPHbm2N9t5IRxTfL3hcuUE/cOGEVLg==}
+  /@unocss/preset-mini@0.56.0:
+    resolution: {integrity: sha512-uEdaiWF4RiU+RFtQjiv0R3RDRjNV+OFa3C+xVELLOIROnvb+h/D2wVxC8t8qOuVe8I6cHsGJgWfEpT3ptDhxqQ==}
     dependencies:
-      '@unocss/core': 0.50.1
+      '@unocss/core': 0.56.0
+      '@unocss/extractor-arbitrary-variants': 0.56.0
+      '@unocss/rule-utils': 0.56.0
+    dev: false
+
+  /@unocss/rule-utils@0.56.0:
+    resolution: {integrity: sha512-ozxI/KlAZmvRlsVy+oysuCXoxXm6141QsYwH1q8heIBBVTOY1jku82VveCfv4ZWrewYkgd27ME7e77ArfGLzyw==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.56.0
     dev: false
 
   /@vitest/expect@0.29.2:

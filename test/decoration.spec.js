@@ -35,8 +35,8 @@ describe("decoration", () => {
     expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
       [
         "\x1b[91m[REMOVED]\x1b[0m decoration-slice",
-        "\x1b[91m[REMOVED]\x1b[0m decoration-none",
         "\x1b[91m[REMOVED]\x1b[0m decoration-clone",
+        "\x1b[91m[REMOVED]\x1b[0m decoration-none",
       ]
     `);
   });

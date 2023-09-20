@@ -196,9 +196,9 @@ exports[`ring > Emits a warning if used with pseudo 2`] = `
 [
   "[91m[REMOVED][0m ring-2",
   "[91m[REMOVED][0m ring-8",
+  "[91m[REMOVED][0m ring-offset-yellow-400",
   "[91m[REMOVED][0m ring-inset",
   "[91m[REMOVED][0m ring-offset-transparent",
-  "[91m[REMOVED][0m ring-offset-yellow-400",
   "[91m[REMOVED][0m ring-blue-500",
 ]
 `;
