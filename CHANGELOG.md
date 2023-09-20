@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/warp-ds/preset-migrate/compare/v1.1.1...v1.1.2) (2023-09-20)
+
+
+### Bug Fixes
+
+* Fix rules for backdrop-blur ([#14](https://github.com/warp-ds/preset-migrate/issues/14)) ([26d42fa](https://github.com/warp-ds/preset-migrate/commit/26d42fa2403d3b0774151ea48743ec9831c5eb98))
+
 ## [1.1.1](https://github.com/warp-ds/preset-migrate/compare/v1.1.0...v1.1.1) (2023-08-25)
 
 
