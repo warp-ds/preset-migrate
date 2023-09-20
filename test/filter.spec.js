@@ -18,7 +18,6 @@ describe('filter',  () => {
 
     test('prints a warning for using deprecated filters with static values', async ({ uno }) => {
         const classes = [
-            'backdrop-blur',
             'backdrop-filter',
             'backdrop-filter-none',
             'backdrop-invert-0',
@@ -48,11 +47,19 @@ describe('filter',  () => {
         expect(warnSpy.calls.flat()).toMatchSnapshot();  
     });
 
-    test('prints a warning for using deprecated (backdrop) blur filter', async ({ uno }) => {
-        const classes = blurDimensions.map(o => [`blur-${o}`, `backdrop-blur-${o}`]).flat();
+    test('prints a warning for using deprecated blur filter', async ({ uno }) => {
+        const classes = blurDimensions.map(o => `blur-${o}`);
         const { css } = await uno.generate(classes);
         expect(css).toMatchInlineSnapshot('""');
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
         expect(warnSpy.calls.flat()).toMatchSnapshot();  
+    });
+
+    test('prints a warning for using deprecated backdrop-blur filter', async ({ uno }) => {
+        const classes = blurDimensions.map(o => `backdrop-blur-${o}`);
+        const { css } = await uno.generate(classes);
+        expect(css).toMatchInlineSnapshot('""');
+        expect(warnSpy).toHaveBeenCalledTimes(classes.length-1);
+        expect(warnSpy.calls.flat()).toMatchSnapshot();
     });
 });

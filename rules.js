@@ -28,7 +28,8 @@ export default [
   [/^ring(?:-(.*))$/, ([_]) => emitWarning(_, TYPES.removed)],
   // filters
   [/^(backdrop-)?(filter|filter-none)$/, ([_]) => emitWarning(_, TYPES.removed)],
-  [/^(backdrop-)?blur(-(.*))?$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^blur(-(.*))?$/, ([_]) => emitWarning(_, TYPES.removed)],
+  [/^backdrop-blur-(sm|md|lg|2xl|3xl)?$/, ([_]) => emitWarning(_, TYPES.replaced, 'Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)')],
   [/^(backdrop-)?(brightness|contrast|hue-rotate|saturate)-(\d+)$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^(backdrop-)?(invert|sepia)(-0)?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^backdrop-opacity-(\d+)$/, ([_]) => emitWarning(_, TYPES.removed)],

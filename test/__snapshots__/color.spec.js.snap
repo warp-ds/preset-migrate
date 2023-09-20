@@ -2,10 +2,10 @@
 
 exports[`colors > Emits a warning for color classes with pseudo 2`] = `
 [
-  "[93m[REPLACED][0m text-blue-500 -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
-  "[93m[REPLACED][0m divide-yellow-100 -> more info on replacements coming soon",
   "[93m[REPLACED][0m border-green-50 -> see https://warp-ds.github.io/css-docs/border-color to find suitable semantic replacement",
   "[93m[REPLACED][0m bg-yellow-400 -> see https://warp-ds.github.io/css-docs/background-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m text-blue-500 -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[93m[REPLACED][0m divide-yellow-100 -> more info on replacements coming soon",
 ]
 `;
 
