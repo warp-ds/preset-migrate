@@ -14,6 +14,7 @@ export const COMING_SOON_MSG = "more info on replacements coming soon";
 export const COLOR_MESSAGES = {
   background: `see ${CSS_DOCS_URL}/background-color to find suitable semantic replacement`,
   border: `see ${CSS_DOCS_URL}/border-color to find suitable semantic replacement`,
+  shadow: `see ${CSS_DOCS_URL}/box-shadow to find suitable semantic replacement`,
   text: `see ${CSS_DOCS_URL}/text-color to find suitable semantic replacement`,
 };
 
@@ -44,6 +45,7 @@ const CLASS_MAP = {
 };
 
 export const emitWarning = (selector, deprecationType, message) => {
+  console.log(selector);
   const className = Object.keys(CLASS_MAP).find(key => selector.includes(key));
   const warningMessage = !message && className ? CLASS_MAP[className] : message;
   console.warn(`${[TYPES.removed, TYPES.replaced].includes(deprecationType) ? CONSOLE_COLORS.error : CONSOLE_COLORS.warn}${deprecationType}${CONSOLE_COLORS.reset} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);

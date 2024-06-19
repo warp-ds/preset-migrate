@@ -54,4 +54,9 @@ export default [
   [/^(s-.+)-default$/, ([_, c]) => emitWarning(_, TYPES.replaced, `use '${c}'`)],
   [/^s-text-link-hover(-active)?$/, ([_]) => emitWarning(_, TYPES.removed, `use 's-text-link'`)],
   [/^(s-.+)-active-hover$/, ([_, c]) => emitWarning(_, TYPES.removed, `use '${c}-selected-hover' (if available)'`)],
+  // warp internal classes
+  [/^i-(bg)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.background} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
+  [/^i-(border)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.border} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
+  [/^i-(text)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.text} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
+  [/^i-(shadow)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.shadow} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
 ]
