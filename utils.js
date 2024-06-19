@@ -45,7 +45,6 @@ const CLASS_MAP = {
 };
 
 export const emitWarning = (selector, deprecationType, message) => {
-  console.log(selector);
   const className = Object.keys(CLASS_MAP).find(key => selector.includes(key));
   const warningMessage = !message && className ? CLASS_MAP[className] : message;
   console.warn(`${[TYPES.removed, TYPES.replaced].includes(deprecationType) ? CONSOLE_COLORS.error : CONSOLE_COLORS.warn}${deprecationType}${CONSOLE_COLORS.reset} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);
