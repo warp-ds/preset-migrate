@@ -18,10 +18,10 @@ describe('miscellaneous', () => {
         expect(warnSpy).toHaveBeenCalledTimes(classes.length);
         expect(warnSpy.calls.flat()).toMatchInlineSnapshot(`
           [
-            "\x1b[91m[REMOVED]\x1b[0m transition-gpu -> use 'transform-gpu' or 'will-change-*'",
-            "\x1b[91m[REMOVED]\x1b[0m fixed-ios-fix -> use 'transform translate-z-0'",
-            "\x1b[93m[REPLACED]\x1b[0m focus-ring -> use 'focusable'",
-            "\x1b[91m[REMOVED]\x1b[0m f-spinner -> use 'animate-spinner' instead",
+            "[91m[REMOVED][0m transition-gpu -> use 'transform-gpu' or 'will-change-*'",
+            "[91m[REMOVED][0m fixed-ios-fix -> use 'transform translate-z-0'",
+            "[91m[REPLACED][0m focus-ring -> use 'focusable'",
+            "[91m[REMOVED][0m f-spinner -> use 'animate-spinner' instead",
           ]
         `);
     });

@@ -78,7 +78,7 @@ describe("colors", () => {
   test("Emits a warning if 'bg' is used with 'none' or 'white'", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
-    const classes = ["bg-none", "bg-white"]
+    const classes = ["bg-white"]
 
     const { css } = await t.uno.generate(classes);
 

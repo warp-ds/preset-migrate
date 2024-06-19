@@ -46,7 +46,7 @@ const CLASS_MAP = {
 export const emitWarning = (selector, deprecationType, message) => {
   const className = Object.keys(CLASS_MAP).find(key => selector.includes(key));
   const warningMessage = !message && className ? CLASS_MAP[className] : message;
-  console.warn(`${deprecationType === TYPES.removed ? CONSOLE_COLORS.error : CONSOLE_COLORS.warn}${deprecationType}${CONSOLE_COLORS.reset} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);
+  console.warn(`${[TYPES.removed, TYPES.replaced].includes(deprecationType) ? CONSOLE_COLORS.error : CONSOLE_COLORS.warn}${deprecationType}${CONSOLE_COLORS.reset} ${selector}${warningMessage ? " -> " + warningMessage : ""}`);
 };
 
 export const colors = ["white", "black", "blue", "green", "aqua", "yellow", "red", "bluegray", "gray"];

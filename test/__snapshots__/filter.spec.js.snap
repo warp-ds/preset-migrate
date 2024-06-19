@@ -22,11 +22,11 @@ exports[`filter > prints a warning for using deprecated backdrop opacity filter 
 
 exports[`filter > prints a warning for using deprecated backdrop-blur filter 2`] = `
 [
-  "[93m[REPLACED][0m backdrop-blur-sm -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
-  "[93m[REPLACED][0m backdrop-blur-md -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
-  "[93m[REPLACED][0m backdrop-blur-lg -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
-  "[93m[REPLACED][0m backdrop-blur-2xl -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
-  "[93m[REPLACED][0m backdrop-blur-3xl -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[91m[REPLACED][0m backdrop-blur-sm -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[91m[REPLACED][0m backdrop-blur-md -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[91m[REPLACED][0m backdrop-blur-lg -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[91m[REPLACED][0m backdrop-blur-2xl -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
+  "[91m[REPLACED][0m backdrop-blur-3xl -> Use sizes s|m|l|xxl|xxxl (instead of sm|md|lg|2xl|3xl)",
 ]
 `;
 

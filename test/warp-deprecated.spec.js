@@ -9,27 +9,27 @@ describe("deprecated warp classes", () => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
     const classes = [
-      's-color-background-default',
-      's-color-background-subtle-default',
-      's-color-background-primary-default',
-      's-color-background-positive-default',
-      's-color-background-negative-default',
-      's-color-background-warning-default',
-      's-color-background-info-default',
-      's-color-border-default',
-      's-color-border-primary-default',
-      's-color-border-primary-subtle-default',
-      's-color-border-positive-default',
-      's-color-border-positive-subtle-default',
-      's-color-border-negative-default',
-      's-color-border-negative-subtle-default',
-      's-color-border-warning-default',
-      's-color-border-warning-subtle-default',
-      's-color-border-info-default',
-      's-color-border-info-subtle-default',
-      's-color-icon-default',
-      's-color-icon-subtle-default',
-      's-color-text-default'
+      's-bg-default',
+      's-bg-subtle-default',
+      's-bg-primary-default',
+      's-bg-positive-default',
+      's-bg-negative-default',
+      's-bg-warning-default',
+      's-bg-info-default',
+      's-border-default',
+      's-border-primary-default',
+      's-border-primary-subtle-default',
+      's-border-positive-default',
+      's-border-positive-subtle-default',
+      's-border-negative-default',
+      's-border-negative-subtle-default',
+      's-border-warning-default',
+      's-border-warning-subtle-default',
+      's-border-info-default',
+      's-border-info-subtle-default',
+      's-icon-default',
+      's-icon-subtle-default',
+      's-text-default'
     ]
 
     const { css } = await t.uno.generate(classes);
