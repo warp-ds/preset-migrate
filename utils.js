@@ -1,4 +1,4 @@
-export const CSS_DOCS_URL = "https://warp-ds.github.io/css-docs";
+export const CSS_DOCS_URL = "https://warp-ds.github.io/tech-docs/css";
 export const TECH_DOCS_URL = "https://warp-ds.github.io/tech-docs";
 
 export const CONSOLE_COLORS = {
