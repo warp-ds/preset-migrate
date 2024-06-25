@@ -50,13 +50,49 @@ export default [
   [/^color-focused?$/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^color-background(-.+)?$/, ([_]) => emitWarning(_, TYPES.removed, COLOR_MESSAGES.background)],
   [/^color-text(-.+)?$/, ([_]) => emitWarning(_, TYPES.removed, COLOR_MESSAGES.text)],
-  // removed Warp classes
+
+  // *** Warp v1 -> v2 ***
+  // replaced semantic classes
   [/^(s-.+)-default$/, ([_, c]) => emitWarning(_, TYPES.replaced, `use '${c}'`)],
+  // removed semantic classes
   [/^s-text-link-hover(-active)?$/, ([_]) => emitWarning(_, TYPES.removed, `use 's-text-link'`)],
   [/^(s-.+)-active-hover$/, ([_, c]) => emitWarning(_, TYPES.removed, `use '${c}-selected-hover' (if available)'`)],
-  // warp internal classes
-  [/^i-(bg)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.background} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
-  [/^i-(border)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.border} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
-  [/^i-(text)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.text} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
-  [/^i-(shadow)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES.shadow} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
+  // removed internal classes
+  [/^i-(bg|border|text|shadow)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES[prop==='bg'?'background':prop]} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
+  // removed alpha tokens
+  [/^(.*--w-.*)-alpha(\d+)(.*)$/, ([_, prefix, alpha, suffix]) => emitWarning(_, TYPES.removed, `all 'alpha' tokens have been removed, try '${prefix}/${alpha}${suffix}', or reference ${CSS_DOCS_URL} for a suitable replacement`)],
+  // removed primitive color tokens
+  [/^.*--w-(bluegray|petroleum)-[1-9]\d{2,3}.*$/, ([_, color]) => emitWarning(_, TYPES.removed, `all '${color}' tokens have been removed, reference ${CSS_DOCS_URL} for a suitable replacement`)],
+  // removed semantic color tokens without s-prefix
+  [/^.*(--w-decoration-link)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' token has been removed`)],
+  [/^.*--w-(color-background)(-subtle|)[^a-z-]*$/, ([_, token, tokenSuffix]) => emitWarning(_, TYPES.removed, `the '--w-${token}${tokenSuffix}' token has been removed. If applicable, use the 's-bg${tokenSuffix}' semantic class (or simply replace it with the equivalent semantic token '--w-s-${token}${tokenSuffix}')`)],
+  [/^.*(--w-color-background-interactive(-subtle|-hover|))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' token has been removed`)],
+  [/^.*--w-(color-text)(-subtle|-placeholder|-inverted(-subtle)*|-link|)[^a-z-]*$/, ([_, token, tokenSuffix]) => emitWarning(_, TYPES.removed, `the '--w-${token}${tokenSuffix}' token has been removed. If applicable, use the 's-text${tokenSuffix}' semantic class (or simply replace it with the equivalent semantic token '--w-s-${token}${tokenSuffix}')`)],
+  [/^.*(--w-color-text-link(-hover|-visited))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' token has been removed`)],
+  // removed semantic color tokens
+  [/^.*(--w-s-color-background-(positive|negative|warning|info)-selected(-hover|-active)?)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' semantic token has been removed`)],
+  [/^.*(--w-s-color-border-negative-selected(-hover)?)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' semantic token has been removed`)],
+  // replaced semantic color tokens
+  [/^.*(--w(-s)?-color-focused)[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}' token has been replaced with '--w-s-border-focused'`)],
+  [/^.*(--w-s-color-background(-subtle|-primary|-positive|-negative|-warning|-info|))-default[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}-default' token has been replaced with '${token}'`)],
+  [/^.*(--w-s-color-border((-primary|-positive|-negative|-warning|-info)(-subtle)?)?)-default[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}-default' token has been replaced with '${token}'`)],
+  [/^.*(--w-s-color-(text|icon(-subtle)?))-default[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}-default' token has been replaced with '${token}'`)],
+  // removed component color tokens
+  [/^.*(--w-color-(alert|box|breadcrumbs|broadcast|card|checkbox|combobox|datepicker|expandable|helptext|image|input|label|list|modal|pageindicator|pagination|popover|radio|select|slider|spinner|starrating|stepindicator|tabs|toast|tooltip)(-[a-z-]*)?)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-badge-(neutral|info|positive|warning|negative|disabled|price|notification)-text)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-badge-(price|notification)-background)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-primary-(text|icon|border(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-secondary-(text|icon|border(-hover|-active|)|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-quiet-(text|icon|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-negative(-quiet)?-(text|icon|border(-hover|-active|)|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-disabled-(text|background))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-(button-link|callout)-text)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-pill-(background|(overlay-)?icon(-hover|-active|)|))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-loading-(text|background|icon))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-button-utility(-quiet)?-(text|border(-hover|-active|)|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-buttongroup-primary-(text(-selected)?|background(-hover|-selected)?|border(-selected)?))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-pill-(filter-(text|icon|background(-hover-|active|))|suggestion-(text|icon)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-switch-(track-background-(selected(-hover)?|disabled)|handle-background(-disabled)?))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  // removed component shadow tokens
+  [/^.*(--w-shadow-(buttongroup|card(-hover)?|combobox|modal|popover|switch-handle|tooltip))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
 ]
