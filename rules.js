@@ -58,7 +58,7 @@ export default [
   [/^s-text-link-hover(-active)?$/, ([_]) => emitWarning(_, TYPES.removed, `use 's-text-link'`)],
   [/^(s-.+)-active-hover$/, ([_, c]) => emitWarning(_, TYPES.removed, `use '${c}-selected-hover' (if available)'`)],
   // removed internal classes
-  [/^i-(bg|border|text|shadow)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES[prop==='bg'?'background':prop]} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
+  [/^i-(bg|border(-[xylrtb])?|text|shadow)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES[prop==='bg'?'background':prop]} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
   // removed alpha tokens
   [/^(.*--w-.*)-alpha(\d+)(.*)$/, ([_, prefix, alpha, suffix]) => emitWarning(_, TYPES.removed, `all 'alpha' tokens have been removed, try '${prefix}/${alpha}${suffix}', or reference ${CSS_DOCS_URL} for a suitable replacement`)],
   // removed primitive color tokens
