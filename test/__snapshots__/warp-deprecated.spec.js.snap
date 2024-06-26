@@ -317,6 +317,19 @@ exports[`deprecated warp classes > Emits a warning if old tokens with alpha valu
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if removed primitive color tokens are found 1`] = `
+[
+  "[91m[REMOVED][0m bg-[--w-bluegray-50] -> all 'bluegray' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-bluegray-50] -> all 'bluegray' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-bluegray-100] -> all 'bluegray' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-bluegray-300] -> all 'bluegray' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m bg-[--w-petroleum-50] -> all 'petroleum' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-petroleum-50] -> all 'petroleum' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-petroleum-100] -> all 'petroleum' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-petroleum-300] -> all 'petroleum' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if semantic color classes used with -active-hover suffix are found 2`] = `
 [
   "[91m[REMOVED][0m s-bg-active-hover -> use 's-bg-selected-hover' (if available)'",
