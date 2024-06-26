@@ -368,6 +368,23 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if old tokens with alpha values are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      'bg-[--w-black-alpha25]',
+      '[--w-blue-600-alpha50]',
+      '[--w-blueberry-600-alpha50]',
+      '[--w-black-alpha70]',
+    ]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(css).toHaveLength(0);
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if semantic color classes used with -active-hover suffix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
