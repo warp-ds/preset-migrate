@@ -338,6 +338,19 @@ exports[`deprecated warp classes > Emits a warning if old tokens with alpha valu
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if removed component shadow tokens are found 1`] = `
+[
+  "[91m[REMOVED][0m [--w-shadow-buttongroup] -> the Warp internal '--w-shadow-buttongroup' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-card] -> the Warp internal '--w-shadow-card' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-card-hover] -> the Warp internal '--w-shadow-card-hover' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-combobox] -> the Warp internal '--w-shadow-combobox' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-modal] -> the Warp internal '--w-shadow-modal' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-popover] -> the Warp internal '--w-shadow-popover' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-switch-handle] -> the Warp internal '--w-shadow-switch-handle' component token has been removed",
+  "[91m[REMOVED][0m [--w-shadow-tooltip] -> the Warp internal '--w-shadow-tooltip' component token has been removed",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if removed primitive color tokens are found 1`] = `
 [
   "[91m[REMOVED][0m bg-[--w-bluegray-50] -> all 'bluegray' tokens have been removed, reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",

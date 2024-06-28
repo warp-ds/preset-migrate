@@ -548,6 +548,26 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if removed component shadow tokens are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      '[--w-shadow-buttongroup]',
+      '[--w-shadow-card]',
+      '[--w-shadow-card-hover]',
+      '[--w-shadow-combobox]',
+      '[--w-shadow-modal]',
+      '[--w-shadow-popover]',
+      '[--w-shadow-switch-handle]',
+      '[--w-shadow-tooltip]',
+    ]
+
+    await t.uno.generate(classes);
+
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if semantic color tokens without s- prefix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
