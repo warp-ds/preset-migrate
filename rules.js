@@ -54,6 +54,7 @@ export default [
   // *** Warp v1 -> v2 ***
   // replaced semantic classes
   [/^(s-.+)-default$/, ([_, c]) => emitWarning(_, TYPES.replaced, `use '${c}'`)],
+  [/^(s-(outline|border)-focus)ed$/, ([_, c]) => emitWarning(_, TYPES.replaced, `use '${c}'`)],
   // removed semantic classes
   [/^s-text-link-hover(-active)?$/, ([_]) => emitWarning(_, TYPES.removed, `use 's-text-link'`)],
   [/^(s-.+)-active-hover$/, ([_, c]) => emitWarning(_, TYPES.removed, `use '${c}-selected-hover' (if available)'`)],
@@ -73,7 +74,7 @@ export default [
   [/^.*(--w-s-color-background-(positive|negative|warning|info)-selected(-hover|-active)?)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' semantic token has been removed`)],
   [/^.*(--w-s-color-border-negative-selected(-hover)?)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' semantic token has been removed`)],
   // replaced semantic color tokens
-  [/^.*(--w(-s)?-color-focused)[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}' token has been replaced with '--w-s-border-focused'`)],
+  [/^.*(--w-((s-)?color|s-color-border)-focused)[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}' token has been replaced with '--w-s-color-border-focus'`)],
   [/^.*(--w-s-color-background(-subtle|-primary|-positive|-negative|-warning|-info|))-default[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}-default' token has been replaced with '${token}'`)],
   [/^.*(--w-s-color-border((-primary|-positive|-negative|-warning|-info)(-subtle)?)?)-default[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}-default' token has been replaced with '${token}'`)],
   [/^.*(--w-s-color-(text|icon(-subtle)?))-default[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}-default' token has been replaced with '${token}'`)],

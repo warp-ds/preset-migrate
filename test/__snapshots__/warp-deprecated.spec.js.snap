@@ -345,6 +345,13 @@ exports[`deprecated warp classes > Emits a warning if removed primitive color to
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if semantic 'focused' color classes are found 1`] = `
+[
+  "[91m[REPLACED][0m s-outline-focused -> use 's-outline-focus'",
+  "[91m[REPLACED][0m s-border-focused -> use 's-border-focus'",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if semantic color classes used with -active-hover suffix are found 2`] = `
 [
   "[91m[REMOVED][0m s-bg-active-hover -> use 's-bg-selected-hover' (if available)'",

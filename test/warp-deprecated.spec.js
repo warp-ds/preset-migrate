@@ -406,6 +406,20 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if semantic 'focused' color classes are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      's-outline-focused',
+      's-border-focused',
+    ]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if semantic color classes used with -active-hover suffix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
