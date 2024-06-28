@@ -321,8 +321,13 @@ exports[`deprecated warp classes > Emits a warning if old slider shadow classes 
 exports[`deprecated warp classes > Emits a warning if old tokens with alpha values are found 1`] = `
 [
   "[91m[REMOVED][0m bg-[--w-black-alpha25] -> all 'alpha' tokens have been removed, try 'bg-[--w-black/25]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-blue-300-alpha30] -> all 'alpha' tokens have been removed, try '[--w-blue-300/30]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-blue-400-alpha30] -> all 'alpha' tokens have been removed, try '[--w-blue-400/30]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
   "[91m[REMOVED][0m [--w-blue-600-alpha50] -> all 'alpha' tokens have been removed, try '[--w-blue-600/50]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
   "[91m[REMOVED][0m [--w-blueberry-600-alpha50] -> all 'alpha' tokens have been removed, try '[--w-blueberry-600/50]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-gray-300-alpha30] -> all 'alpha' tokens have been removed, try '[--w-gray-300/30]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-gray-400-alpha30] -> all 'alpha' tokens have been removed, try '[--w-gray-400/30]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
+  "[91m[REMOVED][0m [--w-gray-900-alpha70] -> all 'alpha' tokens have been removed, try '[--w-gray-900/70]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
   "[91m[REMOVED][0m [--w-black-alpha70] -> all 'alpha' tokens have been removed, try '[--w-black/70]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
 ]
 `;

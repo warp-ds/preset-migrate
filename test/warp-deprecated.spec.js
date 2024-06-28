@@ -368,8 +368,13 @@ describe("deprecated warp classes", () => {
 
     const classes = [
       'bg-[--w-black-alpha25]',
+      '[--w-blue-300-alpha30]',
+      '[--w-blue-400-alpha30]',
       '[--w-blue-600-alpha50]',
       '[--w-blueberry-600-alpha50]',
+      '[--w-gray-300-alpha30]',
+      '[--w-gray-400-alpha30]',
+      '[--w-gray-900-alpha70]',
       '[--w-black-alpha70]',
     ]
 
