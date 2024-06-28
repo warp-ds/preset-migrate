@@ -73,6 +73,58 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if removed semantic color tokens are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const tokens = [
+      '[--w-s-color-background-positive-selected]',
+      '[--w-s-color-background-positive-selected-hover]',
+      '[--w-s-color-background-positive-selected-active]',
+      '[--w-s-color-background-negative-selected]',
+      '[--w-s-color-background-negative-selected-hover]',
+      '[--w-s-color-background-negative-selected-active]',
+      '[--w-s-color-background-warning-selected]',
+      '[--w-s-color-background-warning-selected-hover]',
+      '[--w-s-color-background-warning-selected-active]',
+      '[--w-s-color-background-info-selected]',
+      '[--w-s-color-background-info-selected-hover]',
+      '[--w-s-color-background-info-selected-active]',
+      '[--w-s-color-border-negative-selected]',
+      '[--w-s-color-border-negative-selected-hover]',
+    ]
+
+    await t.uno.generate(tokens);
+
+    expect(warnSpy).toHaveBeenCalledTimes(tokens.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
+  test("Emits a warning if semantic classes refering to removed tokens are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const tokens = [
+      's-bg-positive-selected',
+      's-bg-positive-selected-hover',
+      's-bg-positive-selected-active',
+      's-bg-negative-selected',
+      's-bg-negative-selected-hover',
+      's-bg-negative-selected-active',
+      's-bg-warning-selected',
+      's-bg-warning-selected-hover',
+      's-bg-warning-selected-active',
+      's-bg-info-selected',
+      's-bg-info-selected-hover',
+      's-bg-info-selected-active',
+      's-border-negative-selected',
+      's-border-negative-selected-hover',
+    ]
+
+    await t.uno.generate(tokens);
+
+    expect(warnSpy).toHaveBeenCalledTimes(tokens.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if Warp internal classes with an i-prefix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 

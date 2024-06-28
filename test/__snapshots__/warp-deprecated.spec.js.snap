@@ -351,10 +351,48 @@ exports[`deprecated warp classes > Emits a warning if removed primitive color to
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if removed semantic color tokens are found 1`] = `
+[
+  "[91m[REMOVED][0m [--w-s-color-background-positive-selected] -> the '--w-s-color-background-positive-selected' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-positive-selected-hover] -> the '--w-s-color-background-positive-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-positive-selected-active] -> the '--w-s-color-background-positive-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-negative-selected] -> the '--w-s-color-background-negative-selected' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-negative-selected-hover] -> the '--w-s-color-background-negative-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-negative-selected-active] -> the '--w-s-color-background-negative-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-warning-selected] -> the '--w-s-color-background-warning-selected' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-warning-selected-hover] -> the '--w-s-color-background-warning-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-warning-selected-active] -> the '--w-s-color-background-warning-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-info-selected] -> the '--w-s-color-background-info-selected' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-info-selected-hover] -> the '--w-s-color-background-info-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-background-info-selected-active] -> the '--w-s-color-background-info-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-border-negative-selected] -> the '--w-s-color-border-negative-selected' semantic token has been removed",
+  "[91m[REMOVED][0m [--w-s-color-border-negative-selected-hover] -> the '--w-s-color-border-negative-selected-hover' semantic token has been removed",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if semantic 'focused' color classes are found 1`] = `
 [
   "[91m[REPLACED][0m s-outline-focused -> use 's-outline-focus'",
   "[91m[REPLACED][0m s-border-focused -> use 's-border-focus'",
+]
+`;
+
+exports[`deprecated warp classes > Emits a warning if semantic classes refering to removed tokens are found 1`] = `
+[
+  "[91m[REMOVED][0m s-bg-positive-selected -> the '--w-s-color-background-positive-selected' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-positive-selected-hover -> the '--w-s-color-background-positive-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-positive-selected-active -> the '--w-s-color-background-positive-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-negative-selected -> the '--w-s-color-background-negative-selected' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-negative-selected-hover -> the '--w-s-color-background-negative-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-negative-selected-active -> the '--w-s-color-background-negative-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-warning-selected -> the '--w-s-color-background-warning-selected' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-warning-selected-hover -> the '--w-s-color-background-warning-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-warning-selected-active -> the '--w-s-color-background-warning-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-info-selected -> the '--w-s-color-background-info-selected' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-info-selected-hover -> the '--w-s-color-background-info-selected-hover' semantic token has been removed",
+  "[91m[REMOVED][0m s-bg-info-selected-active -> the '--w-s-color-background-info-selected-active' semantic token has been removed",
+  "[91m[REMOVED][0m s-border-negative-selected -> the '--w-s-color-border-negative-selected' semantic token has been removed",
+  "[91m[REMOVED][0m s-border-negative-selected-hover -> the '--w-s-color-border-negative-selected-hover' semantic token has been removed",
 ]
 `;
 

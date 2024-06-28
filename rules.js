@@ -58,6 +58,8 @@ export default [
   // removed semantic classes
   [/^s-text-link-hover(-active)?$/, ([_]) => emitWarning(_, TYPES.removed, `use 's-text-link'`)],
   [/^(s-.+)-active-hover$/, ([_, c]) => emitWarning(_, TYPES.removed, `use '${c}-selected-hover' (if available)'`)],
+  [/^s-bg-((positive|negative|warning|info)-selected(-hover|-active)?)$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '--w-s-color-background-${token}' semantic token has been removed`)],
+  [/^s-(border-negative-selected(-hover)?)$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '--w-s-color-${token}' semantic token has been removed`)],
   // removed internal classes
   [/^i-(bg|border(-[xylrtb])?|text|shadow)-\$(.*)$/, ([_, prop, token]) => emitWarning(_, TYPES.removed, `all internal classes (classes with 'i-' prefix) and most component specific tokens have been removed, ${COLOR_MESSAGES[prop==='bg'?'background':prop]} (or use class with arbitrary token value instead: '${prop}-[--w-${token}]', if this particular token still exists)`)],
   // removed alpha tokens
