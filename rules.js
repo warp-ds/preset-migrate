@@ -65,7 +65,7 @@ export default [
   // removed primitive color tokens
   [/^.*--w-(bluegray|petroleum)-[1-9]\d{1,2}.*$/, ([_, color]) => emitWarning(_, TYPES.removed, `all '${color}' tokens have been removed, reference ${CSS_DOCS_URL} for a suitable replacement`)],
   // removed semantic color tokens without s-prefix
-  [/^.*(--w-decoration-link)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' token has been removed`)],
+  [/^.*(--w-decoration-text-link)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' token has been removed`)],
   [/^.*--w-(color-background)(-subtle|)[^a-z-]*$/, ([_, token, tokenSuffix]) => emitWarning(_, TYPES.removed, `the '--w-${token}${tokenSuffix}' token has been removed. If applicable, use the 's-bg${tokenSuffix}' semantic class (or simply replace it with the equivalent semantic token '--w-s-${token}${tokenSuffix}')`)],
   [/^.*(--w-color-background-interactive(-subtle|-hover|))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the '${token}' token has been removed`)],
   [/^.*--w-(color-text)(-subtle|-placeholder|-inverted(-subtle)*|-link|)[^a-z-]*$/, ([_, token, tokenSuffix]) => emitWarning(_, TYPES.removed, `the '--w-${token}${tokenSuffix}' token has been removed. If applicable, use the 's-text${tokenSuffix}' semantic class (or simply replace it with the equivalent semantic token '--w-s-${token}${tokenSuffix}')`)],

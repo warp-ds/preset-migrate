@@ -308,6 +308,12 @@ exports[`deprecated warp classes > Emits a warning if color classes without s- s
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if link text decoration token is found 1`] = `
+[
+  "[91m[REMOVED][0m [--w-decoration-text-link] -> the '--w-decoration-text-link' token has been removed",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if old slider shadow classes are found 1`] = `
 [
   "[91m[REMOVED][0m slider-handle-shadow-active -> check https://warp-ds.github.io/tech-docs/css/box-shadow for supported classes",

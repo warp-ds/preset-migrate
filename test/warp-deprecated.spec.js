@@ -385,6 +385,19 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if link text decoration token is found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      '[--w-decoration-text-link]',
+    ]
+
+    await t.uno.generate(classes);
+
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if removed primitive color tokens are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
