@@ -77,11 +77,6 @@ describe("deprecated warp classes", () => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
     const classes = [
-//      'placeholder:i-text-$color-input-text-placeholder'
-//      'active:slider-handle-shadow-active',
-//      'border-[--w-s-color-background]',
-//      'focus:slider-handle-shadow-hover',
-//      'hover:slider-handle-shadow-hover',
       'active:i-bg-$color-button-negative-background-active',
       'active:i-bg-$color-button-negative-quiet-background-active',
       'active:i-bg-$color-button-pill-background-active',
@@ -448,6 +443,24 @@ describe("deprecated warp classes", () => {
     const { css } = await t.uno.generate(classes);
 
     expect(css).toMatchInlineSnapshot('""');
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
+  test("Emits a warning if old slider shadow classes are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      'slider-handle-shadow-active',
+      'slider-handle-shadow-hover',
+      'active:slider-handle-shadow-active',
+      'focus:slider-handle-shadow-hover',
+      'hover:slider-handle-shadow-hover',
+    ]
+
+    const { css } = await t.uno.generate(classes);
+
+//    expect(css).toHaveLength(0); // TODO: Re-enable this when Drive is updated with a version that has the slider shadow rule removed
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });

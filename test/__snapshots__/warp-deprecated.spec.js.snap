@@ -308,6 +308,16 @@ exports[`deprecated warp classes > Emits a warning if color classes without s- s
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if old slider shadow classes are found 1`] = `
+[
+  "[91m[REMOVED][0m slider-handle-shadow-active -> check https://warp-ds.github.io/tech-docs/css/box-shadow for supported classes",
+  "[91m[REMOVED][0m slider-handle-shadow-hover -> check https://warp-ds.github.io/tech-docs/css/box-shadow for supported classes",
+  "[91m[REMOVED][0m slider-handle-shadow-active -> check https://warp-ds.github.io/tech-docs/css/box-shadow for supported classes",
+  "[91m[REMOVED][0m slider-handle-shadow-hover -> check https://warp-ds.github.io/tech-docs/css/box-shadow for supported classes",
+  "[91m[REMOVED][0m slider-handle-shadow-hover -> check https://warp-ds.github.io/tech-docs/css/box-shadow for supported classes",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if old tokens with alpha values are found 1`] = `
 [
   "[91m[REMOVED][0m bg-[--w-black-alpha25] -> all 'alpha' tokens have been removed, try 'bg-[--w-black/25]', or reference https://warp-ds.github.io/tech-docs/css for a suitable replacement",
