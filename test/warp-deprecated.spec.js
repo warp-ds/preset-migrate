@@ -492,12 +492,36 @@ describe("deprecated warp classes", () => {
 
     const { css } = await t.uno.generate(classes);
 
-//    expect(css).toHaveLength(0); // TODO: Re-enable this when Drive is updated with a version that has the slider shadow rule removed
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
-  test("Emits a warning if color classes without s- suffix are found", async (t) => {
+  test("Emits a warning if semantic color tokens without s- prefix are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      '[--w-color-background]',
+      '[--w-color-background-subtle]',
+      '[--w-color-background-interactive]',
+      '[--w-color-background-interactive-hover]',
+      '[--w-color-background-interactive-selected]',
+      '[--w-color-text]',
+      '[--w-color-text-subtle]',
+      '[--w-color-text-placeholder]',
+      '[--w-color-text-inverted]',
+      '[--w-color-text-inverted-subtle]',
+      '[--w-color-text-link]',
+      '[--w-color-text-link-hover]',
+      '[--w-color-text-link-visited]',
+    ]
+
+    const { css } = await t.uno.generate(classes);
+
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
+  test("Emits a warning if color classes without s- prefix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
     const classes = [

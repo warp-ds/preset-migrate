@@ -289,7 +289,7 @@ exports[`deprecated warp classes > Emits a warning if Warp internal classes with
 ]
 `;
 
-exports[`deprecated warp classes > Emits a warning if color classes without s- suffix are found 2`] = `
+exports[`deprecated warp classes > Emits a warning if color classes without s- prefix are found 2`] = `
 [
   "[91m[REMOVED][0m color-focused",
   "[91m[REMOVED][0m color-background -> see https://warp-ds.github.io/tech-docs/css/background-color to find suitable semantic replacement",
@@ -431,5 +431,23 @@ exports[`deprecated warp classes > Emits a warning if semantic color tokens used
   "[91m[REPLACED][0m [--w-s-color-icon-default] -> the '--w-s-color-icon-default' token has been replaced with '--w-s-color-icon'",
   "[91m[REPLACED][0m [--w-s-color-icon-subtle-default] -> the '--w-s-color-icon-subtle-default' token has been replaced with '--w-s-color-icon-subtle'",
   "[91m[REPLACED][0m [--w-s-color-text-default] -> the '--w-s-color-text-default' token has been replaced with '--w-s-color-text'",
+]
+`;
+
+exports[`deprecated warp classes > Emits a warning if semantic color tokens without s- prefix are found 1`] = `
+[
+  "[91m[REMOVED][0m [--w-color-background] -> the '--w-color-background' token has been removed. If applicable, use the 's-bg' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-background')",
+  "[91m[REMOVED][0m [--w-color-background-subtle] -> the '--w-color-background-subtle' token has been removed. If applicable, use the 's-bg-subtle' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-background-subtle')",
+  "[91m[REMOVED][0m [--w-color-background-interactive] -> the '--w-color-background-interactive' token has been removed",
+  "[91m[REMOVED][0m [--w-color-background-interactive-hover] -> the '--w-color-background-interactive-hover' token has been removed",
+  "[91m[REMOVED][0m [--w-color-background-interactive-selected] -> the '--w-color-background-interactive-selected' token has been removed",
+  "[91m[REMOVED][0m [--w-color-text] -> the '--w-color-text' token has been removed. If applicable, use the 's-text' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-text')",
+  "[91m[REMOVED][0m [--w-color-text-subtle] -> the '--w-color-text-subtle' token has been removed. If applicable, use the 's-text-subtle' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-text-subtle')",
+  "[91m[REMOVED][0m [--w-color-text-placeholder] -> the '--w-color-text-placeholder' token has been removed. If applicable, use the 's-text-placeholder' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-text-placeholder')",
+  "[91m[REMOVED][0m [--w-color-text-inverted] -> the '--w-color-text-inverted' token has been removed. If applicable, use the 's-text-inverted' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-text-inverted')",
+  "[91m[REMOVED][0m [--w-color-text-inverted-subtle] -> the '--w-color-text-inverted-subtle' token has been removed. If applicable, use the 's-text-inverted-subtle' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-text-inverted-subtle')",
+  "[91m[REMOVED][0m [--w-color-text-link] -> the '--w-color-text-link' token has been removed. If applicable, use the 's-text-link' semantic class (or simply replace it with the equivalent semantic token '--w-s-color-text-link')",
+  "[91m[REMOVED][0m [--w-color-text-link-hover] -> the '--w-color-text-link-hover' token has been removed",
+  "[91m[REMOVED][0m [--w-color-text-link-visited] -> the '--w-color-text-link-visited' token has been removed",
 ]
 `;
