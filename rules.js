@@ -83,7 +83,7 @@ export default [
   // removed component color tokens
   [/^.*(--w-color-(alert|box|breadcrumbs|broadcast|card|checkbox|combobox|datepicker|expandable|helptext|image|input|label|list|modal|pageindicator|pagination|popover|radio|select|slider|spinner|starrating|stepindicator|tabs|toast|tooltip)(-[a-z-]*)?)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-badge-(neutral|info|positive|warning|negative|disabled|price|notification)-text)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
-  [/^.*(--w-color-badge-(price|notification)-background)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-badge-(disabled|price|notification)-background)[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-button-primary-(text|icon|border(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-button-secondary-(text|icon|border(-hover|-active|)|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-button-quiet-(text|icon|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
@@ -94,7 +94,8 @@ export default [
   [/^.*(--w-color-button-loading-(text|background|icon))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-button-utility(-quiet)?-(text|border(-hover|-active|)|background(-hover|-active|)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-buttongroup-primary-(text(-selected)?|background(-hover|-selected)?|border(-selected)?))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
-  [/^.*(--w-color-pill-(filter-(text|icon|background(-hover-|active|))|suggestion-(text|icon)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-buttongroup-utility-(text(-selected)?|background))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
+  [/^.*(--w-color-pill-(filter-(text|icon|background(-hover|-active|))|suggestion-(text|icon)))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   [/^.*(--w-color-switch-(track-background-(selected(-hover)?|disabled)|handle-background(-disabled)?))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   // removed component shadow tokens
   [/^.*(--w-shadow-(buttongroup|card(-hover)?|combobox|modal|popover|switch-handle|tooltip))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
