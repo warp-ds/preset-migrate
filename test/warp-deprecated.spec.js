@@ -99,7 +99,7 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
-  test("Emits a warning if semantic classes refering to removed tokens are found", async (t) => {
+  test("Emits a warning if semantic classes referring to removed tokens are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
     const tokens = [
@@ -482,6 +482,20 @@ describe("deprecated warp classes", () => {
     const { css } = await t.uno.generate(classes);
 
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
+  test("Emits a warning if semantic 'focused' color tokens are found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const tokens = [
+      '[--w-s-color-focused]',
+      '[--w-s-color-border-focused]',
+    ]
+
+    await t.uno.generate(tokens);
+
+    expect(warnSpy).toHaveBeenCalledTimes(tokens.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 

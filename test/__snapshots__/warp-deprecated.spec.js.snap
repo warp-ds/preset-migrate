@@ -691,7 +691,14 @@ exports[`deprecated warp classes > Emits a warning if semantic 'focused' color c
 ]
 `;
 
-exports[`deprecated warp classes > Emits a warning if semantic classes refering to removed tokens are found 1`] = `
+exports[`deprecated warp classes > Emits a warning if semantic 'focused' color tokens are found 1`] = `
+[
+  "[91m[REPLACED][0m [--w-s-color-focused] -> the '--w-s-color-focused' token has been replaced with '--w-s-color-border-focus'",
+  "[91m[REPLACED][0m [--w-s-color-border-focused] -> the '--w-s-color-border-focused' token has been replaced with '--w-s-color-border-focus'",
+]
+`;
+
+exports[`deprecated warp classes > Emits a warning if semantic classes referring to removed tokens are found 1`] = `
 [
   "[91m[REMOVED][0m s-bg-positive-selected -> the '--w-s-color-background-positive-selected' semantic token has been removed",
   "[91m[REMOVED][0m s-bg-positive-selected-hover -> the '--w-s-color-background-positive-selected-hover' semantic token has been removed",
