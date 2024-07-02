@@ -1,4 +1,4 @@
-import { CSS_DOCS_URL, TECH_DOCS_URL, CONSOLE_COLORS } from './utils.js'
+import { TECH_DOCS_URL, CONSOLE_COLORS } from './utils.js'
 import rules from './rules.js'
 import {
   variantBreakpoints,

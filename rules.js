@@ -100,5 +100,5 @@ export default [
   // removed component shadow tokens
   [/^.*(--w-shadow-(buttongroup|card(-hover)?|combobox|modal|popover|switch-handle|tooltip))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   // removed Slider specific shadow classes
-  [/^slider-handle-shadow-(active|hover)$/, ([_, token]) => emitWarning(_, TYPES.removed, `check ${CSS_DOCS_URL}/box-shadow for supported classes`)],
+  [/^slider-handle-shadow-(active|hover)$/, ([_]) => emitWarning(_, TYPES.removed, `check ${CSS_DOCS_URL}/box-shadow for supported classes`)],
 ]

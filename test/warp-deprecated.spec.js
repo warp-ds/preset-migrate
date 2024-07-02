@@ -479,7 +479,7 @@ describe("deprecated warp classes", () => {
       's-border-focused',
     ]
 
-    const { css } = await t.uno.generate(classes);
+    await t.uno.generate(classes);
 
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
@@ -556,7 +556,7 @@ describe("deprecated warp classes", () => {
       'hover:slider-handle-shadow-hover',
     ]
 
-    const { css } = await t.uno.generate(classes);
+    await t.uno.generate(classes);
 
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
@@ -909,7 +909,7 @@ describe("deprecated warp classes", () => {
       '[--w-color-text-link-visited]',
     ]
 
-    const { css } = await t.uno.generate(classes);
+    await t.uno.generate(classes);
 
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();

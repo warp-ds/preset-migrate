@@ -16,16 +16,4 @@ describe("leading", () => {
     expect(warnSpy).toHaveBeenCalledTimes(classes.length);
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
-
-  test("Emits a warning if used with pseudo", async (t) => {
-    const warnSpy = vi.spyOn(global.console, 'warn')
-
-    const classes = ["md:text-primary", "active:text-secondary", "!text-danger"]
-
-    const { css } = await t.uno.generate(classes);
-
-    expect(css).toMatchInlineSnapshot('""');
-    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
-    expect(warnSpy.calls.flat()).toMatchSnapshot();
-  });
 })

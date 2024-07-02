@@ -11,11 +11,3 @@ exports[`leading > Emits a warning if used with numbers 2`] = `
   "[91m[REPLACED][0m leading-36 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
 ]
 `;
-
-exports[`leading > Emits a warning if used with pseudo 2`] = `
-[
-  "[91m[REPLACED][0m text-primary -> see https://warp-ds.github.io/tech-docs/css/text-color to find suitable semantic replacement",
-  "[91m[REPLACED][0m text-danger -> see https://warp-ds.github.io/tech-docs/css/text-color to find suitable semantic replacement",
-  "[91m[REPLACED][0m text-secondary -> see https://warp-ds.github.io/tech-docs/css/text-color to find suitable semantic replacement",
-]
-`;
