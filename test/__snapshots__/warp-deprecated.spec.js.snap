@@ -684,6 +684,13 @@ exports[`deprecated warp classes > Emits a warning if removed semantic color tok
 ]
 `;
 
+exports[`deprecated warp classes > Emits a warning if replaced token for toggle checkmark icon is found 1`] = `
+[
+  "[91m[REPLACED][0m bg-[url(var(--w-form-check-mark))] -> the '--w-form-check-mark' token has been replaced with '--w-icon-toggle-checked'",
+  "[91m[REPLACED][0m bg-[url(var(--w-form-check-mark))] -> the '--w-form-check-mark' token has been replaced with '--w-icon-toggle-checked'",
+]
+`;
+
 exports[`deprecated warp classes > Emits a warning if semantic 'focused' color classes are found 1`] = `
 [
   "[91m[REPLACED][0m s-outline-focused -> use 's-outline-focus'",

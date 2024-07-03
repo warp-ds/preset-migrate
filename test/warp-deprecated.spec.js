@@ -915,6 +915,20 @@ describe("deprecated warp classes", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
+  test("Emits a warning if replaced token for toggle checkmark icon is found", async (t) => {
+    const warnSpy = vi.spyOn(global.console, 'warn')
+
+    const classes = [
+      'bg-[url(var(--w-form-check-mark))]',
+      'after:bg-[url(var(--w-form-check-mark))]',
+    ]
+
+    await t.uno.generate(classes);
+
+    expect(warnSpy).toHaveBeenCalledTimes(classes.length);
+    expect(warnSpy.calls.flat()).toMatchSnapshot();
+  });
+
   test("Emits a warning if color classes without s- prefix are found", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 

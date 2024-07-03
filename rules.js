@@ -101,4 +101,6 @@ export default [
   [/^.*(--w-shadow-(buttongroup|card(-hover)?|combobox|modal|popover|switch-handle|tooltip))[^a-z-]*$/, ([_, token]) => emitWarning(_, TYPES.removed, `the Warp internal '${token}' component token has been removed`)],
   // removed Slider specific shadow classes
   [/^slider-handle-shadow-(active|hover)$/, ([_]) => emitWarning(_, TYPES.removed, `check ${CSS_DOCS_URL}/box-shadow for supported classes`)],
+  // replaced icon token for Toggle checkmark
+  [/^.*(--w-form-check-mark)[^a-z-].*$/, ([_, token]) => emitWarning(_, TYPES.replaced, `the '${token}' token has been replaced with '--w-icon-toggle-checked'`)],
 ]
