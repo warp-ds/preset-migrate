@@ -1,6 +1,5 @@
 import { describe, expect, test, vi } from "vitest";
 import { setup } from "./_helpers.js";
-import { TYPES } from "../utils.js"
 
 setup();
 

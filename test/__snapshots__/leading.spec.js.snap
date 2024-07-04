@@ -2,20 +2,12 @@
 
 exports[`leading > Emits a warning if used with numbers 2`] = `
 [
-  "[93m[REPLACED][0m leading-1 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-  "[93m[REPLACED][0m leading-12 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-  "[93m[REPLACED][0m leading-14 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-  "[93m[REPLACED][0m leading-16 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-  "[93m[REPLACED][0m leading-20 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-  "[93m[REPLACED][0m leading-24 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-  "[93m[REPLACED][0m leading-36 -> check https://warp-ds.github.io/css-docs/line-height for supported classes",
-]
-`;
-
-exports[`leading > Emits a warning if used with pseudo 2`] = `
-[
-  "[93m[REPLACED][0m text-primary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
-  "[93m[REPLACED][0m text-danger -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
-  "[93m[REPLACED][0m text-secondary -> see https://warp-ds.github.io/css-docs/text-color to find suitable semantic replacement",
+  "[91m[REPLACED][0m leading-1 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
+  "[91m[REPLACED][0m leading-12 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
+  "[91m[REPLACED][0m leading-14 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
+  "[91m[REPLACED][0m leading-16 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
+  "[91m[REPLACED][0m leading-20 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
+  "[91m[REPLACED][0m leading-24 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
+  "[91m[REPLACED][0m leading-36 -> check https://warp-ds.github.io/tech-docs/css/line-height for supported classes",
 ]
 `;

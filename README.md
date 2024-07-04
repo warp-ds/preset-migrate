@@ -1,6 +1,6 @@
 # Warp DS Migrate plugin - a UnoCSS preset
 
-This plugin can be useful when migrating from Fabric to Warp Design System.
+This plugin can be useful when migrating from Fabric to Warp Design System, or from version 1 to version 2 of Warp.
 It will detect all deprecated CSS utility classes and print warnings with useful hints in the terminal.
 
 ## Use in the application
@@ -22,8 +22,8 @@ import { presetMigrate } from '@warp-ds/preset-migrate';
 
 export default defineConfig({
   presets: [
-    presetMigrate(),
-    presetWarp()
+    presetWarp(),
+    presetMigrate()
   ]
 });
 ```
