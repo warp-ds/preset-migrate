@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/warp-ds/preset-migrate/compare/v1.1.2...v2.0.0) (2024-07-04)
+
+
+### Features
+
+* Added rules for migrating to Warp CSS v2 ([#15](https://github.com/warp-ds/preset-migrate/issues/15)) ([ceb8764](https://github.com/warp-ds/preset-migrate/commit/ceb8764826fd6ad02b6b73fa011cad7122938bb3))
+
+
+### BREAKING CHANGES
+
+* Upgrading to v2 of Warp CSS
+
+* feat: Added rules for migrating to Warp CSS v2
+* fix: Update Warp CSS console log intro
+* chore: Update uno dependencies
+* fix: Tweaks to existing rules and messages
+* chore: Readme updates (changed order of presets in readme example, apparently only works correctly with the presetMigrate after presetWarp)
+* chore: Update pnpm/action-setup in release action
+
 ## [1.1.2](https://github.com/warp-ds/preset-migrate/compare/v1.1.1...v1.1.2) (2023-09-20)
 
 
