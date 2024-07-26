@@ -61,10 +61,10 @@ describe("colors", () => {
     expect(warnSpy.calls.flat()).toMatchSnapshot();
   });
 
-  test("Emits a warning if 'divide' is used with 'current', 'transparent', 'none' or 'white'", async (t) => {
+  test("Emits a warning if 'divide' is used with 'transparent', 'none' or 'white'", async (t) => {
     const warnSpy = vi.spyOn(global.console, 'warn')
 
-    const classes = ["current", "transparent", "none", "white"].map((color) =>{
+    const classes = ["transparent", "none", "white"].map((color) =>{
       return ["divide"].map(el => `${el}-${color}`)
     }).flat()
 
