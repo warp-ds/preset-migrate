@@ -14,6 +14,7 @@ export const COMING_SOON_MSG = "more info on replacements coming soon";
 export const COLOR_MESSAGES = {
   background: `see ${CSS_DOCS_URL}/background-color to find suitable semantic replacement`,
   border: `see ${CSS_DOCS_URL}/border-color to find suitable semantic replacement`,
+  divide: `see ${CSS_DOCS_URL}/divide-color to find suitable semantic replacement`,
   shadow: `see ${CSS_DOCS_URL}/box-shadow to find suitable semantic replacement`,
   text: `see ${CSS_DOCS_URL}/text-color to find suitable semantic replacement`,
 };
