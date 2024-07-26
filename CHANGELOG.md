@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/warp-ds/preset-migrate/compare/v2.0.0...v2.0.1) (2024-07-26)
+
+
+### Bug Fixes
+
+* Update messages for divide rules ([#16](https://github.com/warp-ds/preset-migrate/issues/16)) ([1311270](https://github.com/warp-ds/preset-migrate/commit/1311270fbc523cdd93f0e7a1700dbaebf249cbda))
+
 # [2.0.0](https://github.com/warp-ds/preset-migrate/compare/v1.1.2...v2.0.0) (2024-07-04)
 
 
