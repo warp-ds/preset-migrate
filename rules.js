@@ -1,7 +1,6 @@
 import {
   TYPES,
   COLOR_REGEXPS,
-  COMING_SOON_MSG,
   emitWarning,
   CSS_DOCS_URL,
   COLOR_MESSAGES,
@@ -18,9 +17,9 @@ export default [
   [/^leading-\d+$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/line-height for supported classes`)],
   [/^aspect-[wh]-\d+$/, ([_]) => emitWarning(_, TYPES.replaced, "use fractions instead, e.g. aspect-4/3")],
   [/^flex-(shrink|grow)(-0)?$/, ([_, sg, d]) =>  emitWarning(_, TYPES.replaced, `use ${sg}${d || ""}`)],
-  [/^shadow-none$/, ([_]) => emitWarning(_,TYPES.removed)],
+  [/^(drop-)?shadow-none$/, ([_]) => emitWarning(_,TYPES.removed)],
   [/^shadow(-(2|3|4|10|20|30|40))?$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/box-shadow for supported shadow classes`)],
-  [/^drop-shadow(-(2|3|4|10|20|30|40|none))?$/, ([_]) => emitWarning(_, TYPES.replaced, COMING_SOON_MSG)],
+  [/^drop-shadow(-(2|3|4|10|20|30|40))?$/, ([_]) => emitWarning(_, TYPES.replaced, `check ${CSS_DOCS_URL}/drop-shadow for supported shadow classes`)],
   [/^decoration-(slice|none|clone)/, ([_]) => emitWarning(_, TYPES.removed)],
   [/^ring(?:-.*)$/, ([_]) => emitWarning(_, TYPES.removed)],
   // filters

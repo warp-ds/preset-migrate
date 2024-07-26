@@ -9,8 +9,6 @@ export const CONSOLE_COLORS = {
   reset: "\x1b[0m",
 };
 
-export const COMING_SOON_MSG = "more info on replacements coming soon";
-
 export const COLOR_MESSAGES = {
   background: `see ${CSS_DOCS_URL}/background-color to find suitable semantic replacement`,
   border: `see ${CSS_DOCS_URL}/border-color to find suitable semantic replacement`,
