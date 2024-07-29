@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/warp-ds/preset-migrate/compare/v2.0.1...v2.0.2) (2024-07-29)
+
+
+### Bug Fixes
+
+* Update messages for drop-shadow rules ([#17](https://github.com/warp-ds/preset-migrate/issues/17)) ([0de370d](https://github.com/warp-ds/preset-migrate/commit/0de370de6e224afd4ca5b12ca272d7c4d43b3462))
+
 ## [2.0.1](https://github.com/warp-ds/preset-migrate/compare/v2.0.0...v2.0.1) (2024-07-26)
 
 

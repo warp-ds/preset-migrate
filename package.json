@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "name": "@warp-ds/preset-migrate",
   "repository": "git@github.com:warp-ds/preset-migrate.git",
   "scripts": {
