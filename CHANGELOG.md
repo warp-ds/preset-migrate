@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/warp-ds/preset-migrate/compare/v2.0.2...v2.0.3) (2024-08-16)
+
+
+### Bug Fixes
+
+* Tweak rule and message for internal classes ([#18](https://github.com/warp-ds/preset-migrate/issues/18)) ([321e844](https://github.com/warp-ds/preset-migrate/commit/321e8446eea9c389f7366824aea8091d7762b8a0))
+
 ## [2.0.2](https://github.com/warp-ds/preset-migrate/compare/v2.0.1...v2.0.2) (2024-07-29)
 
 
